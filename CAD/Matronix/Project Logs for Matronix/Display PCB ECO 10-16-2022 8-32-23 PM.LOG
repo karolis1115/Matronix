@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=B Pin=P5-16
+Removed Pin From Net: NetName=B Pin=P5-27
+Removed Pin From Net: NetName=B Pin=P7-10
+Removed Pin From Net: NetName=B Pin=U2-7
+Removed Pin From Net: NetName=B Pin=U3-13
+Change Net Name : Old Net Name=B New Net Name=GND
+Added Pin To Net: NetName=B Pin=P5-16
+Added Pin To Net: NetName=B Pin=P7-10
+Added Pin To Net: NetName=B Pin=U2-7
+Added Net: Name=B
+Added Pin To Net: NetName=SDA Pin=P5-27
+Added Pin To Net: NetName=SDA Pin=U3-13
+Added Net: Name=SDA
+Added Room: Name=Display

@@ -1,0 +1,571 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10/26/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:16:38 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc" class="file"><acronym title="C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc">C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">73</td></tr>
+</table>
+</td>
+</table><a name="IDFAJLEPVZQNSKBIM3NJMJX2AAMKYC5D4UXFJG2VD53FCISD3HOQ1P"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZ5SDJULHOQIGFYBNGFAWRCOUHKLGNKWXECWBC2ILSXGVNZBABCTI">Clearance Constraint (Gap=0.203mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNLACAI5BTJVR4BBVNWF0HHXUBVGM12VAPH3WGH0YUFCA01QAZD">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDR441NWVQRXBUNDPHHPD2DQYQUEMBPVOQ4RYS00N3WHWPQVJU3PR">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKVOHGRT0NNU5NFYJHOPR4JN2OOLKVP5KE0HU1RLOK1FKCAPN0MBD">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJCJYVF5JEH50E3K5VD4LHOYGNKKXU3Z15C4HKOKVJ5PJY4I44ZWG">Width Constraint (Min=4.7mm) (Max=5mm) (Preferred=4.7mm) (InNet('5V'))</a></td>
+<td class="column2">59</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLIOEBVUEGETVJ2FULTMCMQTKBHOVRYSAIMHDQOCEJWGYFMPALF3N">Width Constraint (Min=0.254mm) (Max=1mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZR1CIJCQLJMBECAGILZ1EUEUIMBNU54VRU5JEICQQTE1FYYABZLL">Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.203mm) (Air Gap=0.203mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID40J4J3KQSTU5EC2Q0O2ZO3A4XBWN4M5XDBM43HP0FXXRDJ53UIDK">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYD1LNGGMC0GAKJQZZODUBKVTOH444FXQLYFCVLMDHANMRUF0CG0K">Minimum Annular Ring (Minimum=0.076mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3IXLALAUG0COO4EPXRF3MIWNPCCN30BD1NO5GCVTGSIUUVVNWYL">Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3DJJIQHQHO4VBLWIQD2GWJSHLAHMBOJMBVMHOH4FRET5OGSLXC">Hole To Hole Clearance (Gap=0.25mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDM4QPB0YLVFTON0HUYXZUKAOMPCX3K0XXLXNPBOCOUAR33SGMLOBC">Minimum Solder Mask Sliver (Gap=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUHP1SZDEOUI2OPBU45TUV0Y14LVN2HKKGA434LDFZG0UPFYMQT3C">Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3OVDUUPZSFI1FLMSBOF1E54V1I3Y0QKKYCJLM0K03VLA3KJ1MDSP">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDS1BBQIQFV1F5GFO2IZOWJ3PMOOKM2VCRBSR40NHTOC1I4DLVBV2O">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOULOHPTAQDDDMKBT3MUALLPONJD4GLZSKJZUSEP0XXICYRODBAQD">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDF24YZFRP5BK3HKRAYY1FYF55GDHD3TFREWGIZHKGWBE2A5DTLGFD">Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">73</td>
+</tr>
+</table><br><a name="IDR441NWVQRXBUNDPHHPD2DQYQUEMBPVOQ4RYS00N3WHWPQVJU3PR"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13126.811mil|Location1.Y=14050.63mil|Location2.Y=14495.51mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13126.811mil|Location1.Y=14050.63mil|Location2.Y=14495.51mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U3-20(190.881mm,74.041mm) on Top Layer And Pad U3-1(190.881mm,83.341mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13126.811mil|Location1.Y=14416.77mil|Location2.Y=15234.368mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13126.811mil|Location1.Y=14416.77mil|Location2.Y=15234.368mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U3-1(190.881mm,83.341mm) on Top Layer And Pad U6-20(190.881mm,102.108mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13191.811mil|Location1.Y=13006.768mil|Location2.Y=14129.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13191.811mil|Location1.Y=13006.768mil|Location2.Y=14129.37mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U3-20(190.881mm,74.041mm) on Top Layer And Pad U4-1(192.532mm,47.527mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13168.189mil|Location2.X=13191.811mil|Location1.Y=12640.626mil|Location2.Y=13085.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13168.189mil|Location2.X=13191.811mil|Location1.Y=12640.626mil|Location2.Y=13085.508mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U4-20(192.532mm,38.227mm) on Top Layer And Pad U4-1(192.532mm,47.527mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13168.189mil|Location2.X=13191.811mil|Location1.Y=11890.63mil|Location2.Y=12719.366mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13168.189mil|Location2.X=13191.811mil|Location1.Y=11890.63mil|Location2.Y=12719.366mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U7-1(192.532mm,19.177mm) on Top Layer And Pad U4-20(192.532mm,38.227mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13126.811mil|Location1.Y=15155.628mil|Location2.Y=15600.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13103.189mil|Location2.X=13126.811mil|Location1.Y=15155.628mil|Location2.Y=15600.508mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U6-20(190.881mm,102.108mm) on Top Layer And Pad U6-1(190.881mm,111.408mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12512.677mil|Location2.X=13126.811mil|Location1.Y=15521.768mil|Location2.Y=16247.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12512.677mil|Location2.X=13126.811mil|Location1.Y=15521.768mil|Location2.Y=16247.323mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Via (176.657mm,127.762mm) from Top Layer to Bottom Layer And Pad U6-1(190.881mm,111.408mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13168.189mil|Location2.X=13191.811mil|Location1.Y=11524.49mil|Location2.Y=11969.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13168.189mil|Location2.X=13191.811mil|Location1.Y=11524.49mil|Location2.Y=11969.37mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U7-20(192.532mm,9.877mm) on Top Layer And Pad U7-1(192.532mm,19.177mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12818.189mil|Location2.X=12991.811mil|Location1.Y=11890.63mil|Location2.Y=11969.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12818.189mil|Location2.X=12991.811mil|Location1.Y=11890.63mil|Location2.Y=11969.37mil|Absolute=True">Un-Routed Net Constraint: Net CLK Between Pad U7-8(183.642mm,19.177mm) on Top Layer And Pad U7-5(187.452mm,19.177mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10705mil|Location2.X=12709.968mil|Location1.Y=12717mil|Location2.Y=12918.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10705mil|Location2.X=12709.968mil|Location1.Y=12717mil|Location2.Y=12918.968mil|Absolute=True">Un-Routed Net Constraint: Net B_BUFF Between Via (132.207mm,41.707mm) from Top Layer to Bottom Layer And Track (178.053mm,41.757mm)(178.053mm,61.056mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15675mil|Location2.X=15875mil|Location1.Y=15432mil|Location2.Y=15632mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15675mil|Location2.X=15875mil|Location1.Y=15432mil|Location2.Y=15632mil|Absolute=True">Un-Routed Net Constraint: Net BAT_SENSE_B Between Track (258.347mm,110.765mm)(258.445mm,110.668mm) on Bottom Layer And Track (258.445mm,58.572mm)(258.445mm,110.668mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJCJYVF5JEH50E3K5VD4LHOYGNKKXU3Z15C4HKOKVJ5PJY4I44ZWG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=4.7mm) (Max=5mm) (Preferred=4.7mm) (InNet('5V'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9779.011mil|Location2.X=9900.121mil|Location1.Y=13639.861mil|Location2.Y=13760.971mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9779.011mil|Location2.X=9900.121mil|Location1.Y=13639.861mil|Location2.Y=13760.971mil|Absolute=True">Width Constraint: Track (104.728mm,67.103mm)(110.642mm,61.188mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9927.936mil|Location2.X=10049.046mil|Location1.Y=13490.936mil|Location2.Y=13612.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9927.936mil|Location2.X=10049.046mil|Location1.Y=13490.936mil|Location2.Y=13612.046mil|Absolute=True">Width Constraint: Track (110.642mm,61.188mm)(112.293mm,59.538mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9985.309mil|Location2.X=10106.419mil|Location1.Y=13433.563mil|Location2.Y=13554.673mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9985.309mil|Location2.X=10106.419mil|Location1.Y=13433.563mil|Location2.Y=13554.673mil|Absolute=True">Width Constraint: Track (112.293mm,59.538mm)(113.557mm,58.274mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10563.7mil|Location2.X=10684.81mil|Location1.Y=13408.681mil|Location2.Y=13529.791mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10563.7mil|Location2.X=10684.81mil|Location1.Y=13408.681mil|Location2.Y=13529.791mil|Absolute=True">Width Constraint: Track (113.557mm,58.274mm)(141.675mm,58.274mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10934.445mil|Location2.X=11055.555mil|Location1.Y=14697.162mil|Location2.Y=14818.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10934.445mil|Location2.X=11055.555mil|Location1.Y=14697.162mil|Location2.Y=14818.272mil|Absolute=True">Width Constraint: Track (137.033mm,89.546mm)(137.033mm,92.456mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11013.185mil|Location2.X=11134.295mil|Location1.Y=14639.879mil|Location2.Y=14760.989mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11013.185mil|Location2.X=11134.295mil|Location1.Y=14639.879mil|Location2.Y=14760.989mil|Absolute=True">Width Constraint: Track (137.033mm,89.546mm)(141.033mm,89.546mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10973.815mil|Location2.X=11094.925mil|Location1.Y=14793.815mil|Location2.Y=14914.925mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10973.815mil|Location2.X=11094.925mil|Location1.Y=14793.815mil|Location2.Y=14914.925mil|Absolute=True">Width Constraint: Track (137.033mm,92.456mm)(139.033mm,94.456mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11013.185mil|Location2.X=11134.295mil|Location1.Y=14926.098mil|Location2.Y=15047.208mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11013.185mil|Location2.X=11134.295mil|Location1.Y=14926.098mil|Location2.Y=15047.208mil|Absolute=True">Width Constraint: Track (139.033mm,94.456mm)(139.033mm,99.176mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11091.925mil|Location2.X=11213.035mil|Location1.Y=15019.011mil|Location2.Y=15140.121mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11091.925mil|Location2.X=11213.035mil|Location1.Y=15019.011mil|Location2.Y=15140.121mil|Absolute=True">Width Constraint: Track (139.033mm,99.176mm)(143.033mm,99.176mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11487.697mil|Location2.X=11608.807mil|Location1.Y=13038.193mil|Location2.Y=13159.303mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11487.697mil|Location2.X=11608.807mil|Location1.Y=13038.193mil|Location2.Y=13159.303mil|Absolute=True">Width Constraint: Track (141.675mm,58.274mm)(160.496mm,39.453mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11545.902mil|Location2.X=11667.012mil|Location1.Y=15733.036mil|Location2.Y=15854.146mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11545.902mil|Location2.X=11667.012mil|Location1.Y=15733.036mil|Location2.Y=15854.146mil|Absolute=True">Width Constraint: Track (143.033mm,107.781mm)(162.095mm,126.843mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11170.665mil|Location2.X=11291.775mil|Location1.Y=15188.405mil|Location2.Y=15309.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11170.665mil|Location2.X=11291.775mil|Location1.Y=15188.405mil|Location2.Y=15309.515mil|Absolute=True">Width Constraint: Track (143.033mm,99.176mm)(143.033mm,107.781mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11562.909mil|Location2.X=11684.019mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11562.909mil|Location2.X=11684.019mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (152.496mm,3.494mm)(153.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11602.28mil|Location2.X=11723.39mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11602.28mil|Location2.X=11723.39mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (153.496mm,3.494mm)(154.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11641.65mil|Location2.X=11762.76mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11641.65mil|Location2.X=11762.76mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (154.496mm,3.494mm)(155.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11681.02mil|Location2.X=11802.13mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11681.02mil|Location2.X=11802.13mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (155.496mm,3.494mm)(156.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11720.39mil|Location2.X=11841.5mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11720.39mil|Location2.X=11841.5mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (156.496mm,3.494mm)(157.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11759.76mil|Location2.X=11880.87mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11759.76mil|Location2.X=11880.87mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (157.496mm,3.494mm)(158.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11799.13mil|Location2.X=11920.24mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11799.13mil|Location2.X=11920.24mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (158.496mm,3.494mm)(159.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11838.5mil|Location2.X=11959.61mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11838.5mil|Location2.X=11959.61mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (159.496mm,3.494mm)(160.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11858.185mil|Location2.X=11979.295mil|Location1.Y=11959.855mil|Location2.Y=12080.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11858.185mil|Location2.X=11979.295mil|Location1.Y=11959.855mil|Location2.Y=12080.965mil|Absolute=True">Width Constraint: Track (160.496mm,3.494mm)(160.496mm,39.453mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11877.87mil|Location2.X=11998.98mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11877.87mil|Location2.X=11998.98mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (160.496mm,3.494mm)(161.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11917.24mil|Location2.X=12038.35mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11917.24mil|Location2.X=12038.35mil|Location1.Y=11252.005mil|Location2.Y=11373.115mil|Absolute=True">Width Constraint: Track (161.496mm,3.494mm)(162.496mm,3.494mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11921.139mil|Location2.X=12042.249mil|Location1.Y=16186.359mil|Location2.Y=16307.469mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11921.139mil|Location2.X=12042.249mil|Location1.Y=16186.359mil|Location2.Y=16307.469mil|Absolute=True">Width Constraint: Track (162.095mm,126.843mm)(162.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11940.824mil|Location2.X=12061.934mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11940.824mil|Location2.X=12061.934mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (162.095mm,130.81mm)(163.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11980.194mil|Location2.X=12101.304mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11980.194mil|Location2.X=12101.304mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (163.095mm,130.81mm)(164.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12019.564mil|Location2.X=12140.674mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12019.564mil|Location2.X=12140.674mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (164.095mm,130.81mm)(165.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12058.934mil|Location2.X=12180.044mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12058.934mil|Location2.X=12180.044mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (165.095mm,130.81mm)(166.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12098.304mil|Location2.X=12219.414mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12098.304mil|Location2.X=12219.414mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (166.095mm,130.81mm)(167.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12137.674mil|Location2.X=12258.784mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12137.674mil|Location2.X=12258.784mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (167.095mm,130.81mm)(168.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12177.044mil|Location2.X=12298.154mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12177.044mil|Location2.X=12298.154mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (168.095mm,130.81mm)(169.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12216.414mil|Location2.X=12337.524mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12216.414mil|Location2.X=12337.524mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (169.095mm,130.81mm)(170.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12255.784mil|Location2.X=12376.894mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12255.784mil|Location2.X=12376.894mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (170.095mm,130.81mm)(171.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12295.154mil|Location2.X=12416.264mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12295.154mil|Location2.X=12416.264mil|Location1.Y=16264.445mil|Location2.Y=16385.555mil|Absolute=True">Width Constraint: Track (171.095mm,130.81mm)(172.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12314.839mil|Location2.X=12435.949mil|Location1.Y=16216.748mil|Location2.Y=16337.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12314.839mil|Location2.X=12435.949mil|Location1.Y=16216.748mil|Location2.Y=16337.858mil|Absolute=True">Width Constraint: Track (172.095mm,128.387mm)(172.095mm,130.81mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12327.142mil|Location2.X=12448.252mil|Location1.Y=16156.748mil|Location2.Y=16277.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12327.142mil|Location2.X=12448.252mil|Location1.Y=16156.748mil|Location2.Y=16277.858mil|Absolute=True">Width Constraint: Track (172.095mm,128.387mm)(172.72mm,127.762mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12416.945mil|Location2.X=12538.055mil|Location1.Y=16144.445mil|Location2.Y=16265.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12416.945mil|Location2.X=12538.055mil|Location1.Y=16144.445mil|Location2.Y=16265.555mil|Absolute=True">Width Constraint: Track (172.72mm,127.762mm)(176.657mm,127.762mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12950.945mil|Location2.X=13072.055mil|Location1.Y=16144.445mil|Location2.Y=16265.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12950.945mil|Location2.X=13072.055mil|Location1.Y=16144.445mil|Location2.Y=16265.555mil|Absolute=True">Width Constraint: Track (176.657mm,127.762mm)(199.847mm,127.762mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13587.945mil|Location2.X=13709.055mil|Location1.Y=15963.945mil|Location2.Y=16085.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13587.945mil|Location2.X=13709.055mil|Location1.Y=15963.945mil|Location2.Y=16085.055mil|Absolute=True">Width Constraint: Track (199.847mm,127.762mm)(209.017mm,118.593mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15294.445mil|Location2.X=15415.555mil|Location1.Y=15783.445mil|Location2.Y=15904.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15294.445mil|Location2.X=15415.555mil|Location1.Y=15783.445mil|Location2.Y=15904.555mil|Absolute=True">Width Constraint: Track (209.017mm,118.593mm)(286.537mm,118.593mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16842.445mil|Location2.X=16963.555mil|Location1.Y=15761.445mil|Location2.Y=15882.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16842.445mil|Location2.X=16963.555mil|Location1.Y=15761.445mil|Location2.Y=15882.555mil|Absolute=True">Width Constraint: Track (286.537mm,118.593mm)(287.655mm,117.475mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16864.445mil|Location2.X=16985.555mil|Location1.Y=15239.445mil|Location2.Y=15360.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16864.445mil|Location2.X=16985.555mil|Location1.Y=15239.445mil|Location2.Y=15360.555mil|Absolute=True">Width Constraint: Track (287.655mm,92.075mm)(287.655mm,117.475mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16875.094mil|Location2.X=16996.204mil|Location1.Y=14728.796mil|Location2.Y=14849.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16875.094mil|Location2.X=16996.204mil|Location1.Y=14728.796mil|Location2.Y=14849.906mil|Absolute=True">Width Constraint: Track (287.655mm,92.075mm)(288.196mm,91.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16940.094mil|Location2.X=17061.204mil|Location1.Y=14718.147mil|Location2.Y=14839.257mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16940.094mil|Location2.X=17061.204mil|Location1.Y=14718.147mil|Location2.Y=14839.257mil|Absolute=True">Width Constraint: Track (288.196mm,91.534mm)(290.957mm,91.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14462.24mil|Location2.Y=14583.35mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14462.24mil|Location2.Y=14583.35mil|Absolute=True">Width Constraint: Track (290.957mm,84.534mm)(290.957mm,85.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14501.61mil|Location2.Y=14622.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14501.61mil|Location2.Y=14622.72mil|Absolute=True">Width Constraint: Track (290.957mm,85.534mm)(290.957mm,86.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14540.98mil|Location2.Y=14662.09mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14540.98mil|Location2.Y=14662.09mil|Absolute=True">Width Constraint: Track (290.957mm,86.534mm)(290.957mm,87.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14580.351mil|Location2.Y=14701.461mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14580.351mil|Location2.Y=14701.461mil|Absolute=True">Width Constraint: Track (290.957mm,87.534mm)(290.957mm,88.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14619.722mil|Location2.Y=14740.832mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14619.722mil|Location2.Y=14740.832mil|Absolute=True">Width Constraint: Track (290.957mm,88.534mm)(290.957mm,89.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14659.092mil|Location2.Y=14780.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14659.092mil|Location2.Y=14780.202mil|Absolute=True">Width Constraint: Track (290.957mm,89.534mm)(290.957mm,90.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14698.462mil|Location2.Y=14819.572mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14698.462mil|Location2.Y=14819.572mil|Absolute=True">Width Constraint: Track (290.957mm,90.534mm)(290.957mm,91.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14737.832mil|Location2.Y=14858.942mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14737.832mil|Location2.Y=14858.942mil|Absolute=True">Width Constraint: Track (290.957mm,91.534mm)(290.957mm,92.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14777.202mil|Location2.Y=14898.312mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14777.202mil|Location2.Y=14898.312mil|Absolute=True">Width Constraint: Track (290.957mm,92.534mm)(290.957mm,93.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14816.572mil|Location2.Y=14937.682mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=16994.445mil|Location2.X=17115.555mil|Location1.Y=14816.572mil|Location2.Y=14937.682mil|Absolute=True">Width Constraint: Track (290.957mm,93.534mm)(290.957mm,94.534mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8614.445mil|Location2.X=8735.555mil|Location1.Y=13344.445mil|Location2.Y=13465.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8614.445mil|Location2.X=8735.555mil|Location1.Y=13344.445mil|Location2.Y=13465.555mil|Absolute=True">Width Constraint: Track (76.835mm,56.642mm)(79.375mm,56.642mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8892.945mil|Location2.X=9014.055mil|Location1.Y=13344.445mil|Location2.Y=13465.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8892.945mil|Location2.X=9014.055mil|Location1.Y=13344.445mil|Location2.Y=13465.555mil|Absolute=True">Width Constraint: Track (79.375mm,56.642mm)(90.983mm,56.642mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9166.945mil|Location2.X=9288.055mil|Location1.Y=13389.945mil|Location2.Y=13511.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9166.945mil|Location2.X=9288.055mil|Location1.Y=13389.945mil|Location2.Y=13511.055mil|Absolute=True">Width Constraint: Track (90.983mm,56.642mm)(93.294mm,58.953mm) on Top Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9277.086mil|Location2.X=9398.196mil|Location1.Y=13435.445mil|Location2.Y=13556.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9277.086mil|Location2.X=9398.196mil|Location1.Y=13435.445mil|Location2.Y=13556.555mil|Absolute=True">Width Constraint: Track (93.294mm,58.953mm)(96.578mm,58.953mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9502.152mil|Location2.X=9623.262mil|Location1.Y=13595.87mil|Location2.Y=13716.98mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9502.152mil|Location2.X=9623.262mil|Location1.Y=13595.87mil|Location2.Y=13716.98mil|Absolute=True">Width Constraint: Track (96.578mm,58.953mm)(104.728mm,67.103mm) on Bottom Layer Actual Width = 3mm, Target Width = 4.7mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDS1BBQIQFV1F5GFO2IZOWJ3PMOOKM2VCRBSR40NHTOC1I4DLVBV2O"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12601.468mil|Location2.X=12625.057mil|Location1.Y=12810.468mil|Location2.Y=12844.667mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12601.468mil|Location2.X=12625.057mil|Location1.Y=12810.468mil|Location2.Y=12844.667mil|Absolute=True">Net Antennae: Track (178.053mm,41.757mm)(178.053mm,61.056mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15762.66mil|Location2.X=15786.249mil|Location1.Y=15527.34mil|Location2.Y=15561.54mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15762.66mil|Location2.X=15786.249mil|Location1.Y=15527.34mil|Location2.Y=15561.54mil|Absolute=True">Net Antennae: Track (240.987mm,110.765mm)(258.347mm,110.765mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15766.5mil|Location2.X=15790.089mil|Location1.Y=15523.5mil|Location2.Y=15557.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Matronix\CAD\Matronix\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15766.5mil|Location2.X=15790.089mil|Location1.Y=15523.5mil|Location2.Y=15557.7mil|Absolute=True">Net Antennae: Track (258.445mm,58.572mm)(258.445mm,110.668mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

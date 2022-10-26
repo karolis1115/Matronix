@@ -1,0 +1,23 @@
+Added Pin To Net: NetName=5V Pin=P3-A1
+Added Pin To Net: NetName=5V Pin=P3-A2
+Added Pin To Net: NetName=5V Pin=P3-A3
+Added Pin To Net: NetName=5V Pin=P3-A4
+Added Pin To Net: NetName=5V Pin=P3-A5
+Added Pin To Net: NetName=5V Pin=P3-A6
+Added Pin To Net: NetName=5V Pin=P3-A7
+Added Pin To Net: NetName=5V Pin=P3-A8
+Added Pin To Net: NetName=5V Pin=P3-A9
+Added Pin To Net: NetName=5V Pin=P3-A10
+Added Pin To Net: NetName=5V Pin=P3-A11
+Added Pin To Net: NetName=GND Pin=P3-B1
+Added Pin To Net: NetName=GND Pin=P3-B2
+Added Pin To Net: NetName=GND Pin=P3-B3
+Added Pin To Net: NetName=GND Pin=P3-B4
+Added Pin To Net: NetName=GND Pin=P3-B5
+Added Pin To Net: NetName=GND Pin=P3-B6
+Added Pin To Net: NetName=GND Pin=P3-B7
+Added Pin To Net: NetName=GND Pin=P3-B8
+Added Pin To Net: NetName=GND Pin=P3-B9
+Added Pin To Net: NetName=GND Pin=P3-B10
+Added Pin To Net: NetName=GND Pin=P3-B11
+Added Room: Name=Display

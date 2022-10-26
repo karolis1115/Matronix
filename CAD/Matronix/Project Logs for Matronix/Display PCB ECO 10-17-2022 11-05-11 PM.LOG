@@ -1,0 +1,24 @@
+Added Component: Designator=J?(GCT_USB4115-03-C_REVB2)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/USB4115-03-C/Global+Connector+Technology/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Global Connector Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "USB4115-03-C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/USB4115-03-C/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/USB4115-03-C/Global+Connector+Technology/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J?-A1
+Added Pin To Net: NetName=5V Pin=J?-A4
+Added Pin To Net: NetName=5V Pin=J?-A9
+Added Pin To Net: NetName=GND Pin=J?-A12
+Added Pin To Net: NetName=GND Pin=J?-B1
+Added Pin To Net: NetName=5V Pin=J?-B4
+Added Pin To Net: NetName=5V Pin=J?-B9
+Added Pin To Net: NetName=GND Pin=J?-B12
+Added Pin To Net: NetName=GND Pin=J?-S1
+Added Pin To Net: NetName=GND Pin=J?-S2
+Added Pin To Net: NetName=GND Pin=J?-S3
+Added Pin To Net: NetName=GND Pin=J?-S4
+Added Member To Class: ClassName=Display Member=Component J? USB4115-03-C_REVB2
+Added Room: Name=Display

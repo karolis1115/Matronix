@@ -1,0 +1,7 @@
+Removed Member From Class: ClassName=Display Member=U?
+Change Component Designator: OldDesignator=IC? NewDesignator=IC1
+Change Component Designator: OldDesignator=U5 NewDesignator=U6
+Change Component Designator: OldDesignator=U6 NewDesignator=U7
+Change Component Designator: OldDesignator=U? NewDesignator=U5
+Added Member To Class: ClassName=Display Member=Component U7 SN74HCT245DWR
+Added Room: Name=Display

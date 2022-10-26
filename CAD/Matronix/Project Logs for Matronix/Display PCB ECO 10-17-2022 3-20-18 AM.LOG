@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=P6 NewDesignator=P7
+Change Component Designator: OldDesignator=P7 NewDesignator=P6
+Change Component Designator: OldDesignator=P? NewDesignator=P5
+Change Component Designator: OldDesignator=U1 NewDesignator=U3
+Change Component Designator: OldDesignator=U3 NewDesignator=U1
+Change Component Designator: OldDesignator=U4 NewDesignator=U5
+Change Component Designator: OldDesignator=U5 NewDesignator=U4
+Added Pin To Net: NetName=5V Pin=P4-A1

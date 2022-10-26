@@ -2,14 +2,14 @@
 Saxion University of Applied Sciences Project Simulation & Integration 2022. 
 
 # Team members
-- Miguel Pérez Hernández: 524262
-- Karolis Juozapaitis: 517546
-- Jurijs Zuravlovs: 440882
-- Dmytro Taras: 516824
-- Tarik Mandic: 523830
+- Borna Modric 481209 481209@student.saxion.nl
+- Joshua Phiri 511266 511266@student.saxion.nl
+- Luuk Vulkers 523822 523822@student.saxion.nl
+- Esther Ajumo 510127 510127@student.saxion.nl
+- Karolis Juozapaitis 517546 517546@student.saxion.nl
 
 # Goal
-To make a Batery powered, wirelessly controlled RGB LED display board, subgoal is to design a DC/DC converter that will be used alongside the project.
+To make a modular, batery powered, wirelessly controlled RGB LED display board, while also designing a DC/DC converter based on given requirements.
 
 # What is what
 - CAD - CAD model designs for 3D printing
@@ -18,5 +18,10 @@ To make a Batery powered, wirelessly controlled RGB LED display board, subgoal i
 - Documents - Files such as Reports and project plans and so on
 - Pictures - Project pictures and so on
 
+# Libraries used
+- Library + Recources https://github.com/hzeller/rpi-rgb-led-matrix
+
 # Sources
-- https://en.wikipedia.org/wiki/ESP32
+- https://www.raspberrypi.org/
+- https://en.wikipedia.org/wiki/Raspberry_Pi
+- https://github.com/hzeller/rpi-rgb-led-matrix
