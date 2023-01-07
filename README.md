@@ -1,4 +1,4 @@
-# Matronix
+![Matroniix](https://github.com/karolis1115/Matronix/blob/master/Pictures/Matronix%20Logo.png)
 Saxion University of Applied Sciences Project Simulation & Integration 2022. 
 
 # Team members
