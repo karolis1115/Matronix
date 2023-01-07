@@ -1,0 +1,457 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">07/12/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">18:38:39</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc" class="file"><acronym title="C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc">C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">32</td></tr>
+</table>
+</td>
+</table><a name="IDFV2CHWPENZ0RMGPETK3VV4C45PHXKE3QZQCLFVBMCFCQ5HXKDMWK"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVUPGRURFWQYZCMKJ2F2OANKFKGLWOEAPCE4ZFBPWS5555UPL2J4J">Clearance Constraint (Gap=0.203mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBHEHOKT2QFA5CQ5RDD3I1XXFFMDJWHXBZLHKPBE3N2J5N0SZZFLJ">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPJHRXVJXTUTXF3DLRAC14ILWQL0N0GDPXLM4U4FOB135RJNRBCOB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSMQJUHPKBIEABOTHOBNAEQAISNJ42VBUCDJG52GJQBTFEQ3P2DJJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBHUBFEB0XCNGKFPRFA1ENFIO3DQQGADMP0FAIAEAGM1HAZULL5KM">Width Constraint (Min=0.254mm) (Max=5mm) (Preferred=4.7mm) (InNet('5V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIWNNCEHO41OIFKFL0M3PLNUUXI2CKTTBLC0ULAKOWFNRTD2G0I0G">Width Constraint (Min=0.254mm) (Max=1mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVH3OWMGPJY1LPURPJOUNCRUULLK0HDO14AN4PHYYXOUFOSTSE5K">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNXSSM1R2SQTJK5JJHWFDCXWXRBS1BQK2SNGANSKSDSECG3W20ZIH">Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.203mm) (Air Gap=0.203mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIMLY5LZLF0FJHKL5QF4OJE2ZEI4LXNF2NKL5Q3BJQ53EI0DPORWK">Minimum Annular Ring (Minimum=0.076mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDKVLSFAUUT0JKWIZCE3VOO1YPNGM1AO33AKP1YC14H14GTNFGFFF">Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0WHFMF0GT4IQFBGKUFD43IMC3IQP22ZOKJSZMWK1HJ4RZWOTZVTF">Hole To Hole Clearance (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5312CCK3XE2CJV4RJMA5VCHGJF1MSTXJEX5U35GN4CSB2AIHTIPP">Minimum Solder Mask Sliver (Gap=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDXI0F3MFGSDLNLFUIOCE0R1Z1PZARGZSDU4AFEGAQLCTV10H4CS">Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1CBWT4RWBOWTEXDAYNAGW3KA4ZVTUMXXI454FNOC2HDSOOUY0JC">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAIPKHFERD4UHF1M3KARMTMOLRCNNK3UWU521RBBZTL4NSRWCIT2J">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTD0IVYT03AEMBXMBIGWGNHOW4K25UXDROCRUEUVMDADNPDTRMPG">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL3V0NV0BEWC2KB20XOJ05PBULP4F1TQHJMGFXOKQ1L0S2N3CELVG">Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPC405MRQUAYLDUWTXGGSWRJE3NQM5JFULQAB3EFU0DIN4B1HQ3XP">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">32</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">32</td>
+</tr>
+</table><br><a name="IDFUUYGS4WQSZ0J0WIIHRJGR3OOBPWAFZBATHBDHOC5D0ZX213QAYM"><h2>Rule Violations</h2></a><a name="IDAZ433CWGSA0NTOMBSWC4QWXCBH3LNUN5CMZP5L3EV2UOPSG53LJ"><h2>Waived Violations</h2></a><a name="IDPC405MRQUAYLDUWTXGGSWRJE3NQM5JFULQAB3EFU0DIN4B1HQ3XP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11802.921mil|Location2.X=11806.546mil|Location1.Y=45794.155mil|Location2.Y=45797.779mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11802.921mil|Location2.X=11806.546mil|Location1.Y=45794.155mil|Location2.Y=45797.779mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (145.275mm,137.422mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11801.741mil|Location2.X=11805.366mil|Location1.Y=41205.639mil|Location2.Y=41209.264mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11801.741mil|Location2.X=11805.366mil|Location1.Y=41205.639mil|Location2.Y=41209.264mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (145.275mm,20.075mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11767.969mil|Location2.X=11771.594mil|Location1.Y=45794.177mil|Location2.Y=45797.802mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11767.969mil|Location2.X=11771.594mil|Location1.Y=45794.177mil|Location2.Y=45797.802mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (145.325mm,137.522mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11767.964mil|Location2.X=11771.588mil|Location1.Y=41204.702mil|Location2.Y=41208.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11767.964mil|Location2.X=11771.588mil|Location1.Y=41204.702mil|Location2.Y=41208.326mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (145.325mm,19.975mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6870.582mil|Location2.X=6874.207mil|Location1.Y=44046.644mil|Location2.Y=44050.269mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6870.582mil|Location2.X=6874.207mil|Location1.Y=44046.644mil|Location2.Y=44050.269mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (19.975mm,92.178mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6870.605mil|Location2.X=6874.229mil|Location1.Y=44011.693mil|Location2.Y=44015.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6870.605mil|Location2.X=6874.229mil|Location1.Y=44011.693mil|Location2.Y=44015.318mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (20.075mm,92.228mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17759.369mil|Location2.X=17762.994mil|Location1.Y=44011.442mil|Location2.Y=44015.067mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17759.369mil|Location2.X=17762.994mil|Location1.Y=44011.442mil|Location2.Y=44015.067mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (297.425mm,92.222mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17759.392mil|Location2.X=17763.017mil|Location1.Y=44046.394mil|Location2.Y=44050.018mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17759.392mil|Location2.X=17763.017mil|Location1.Y=44046.394mil|Location2.Y=44050.018mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Arc (297.525mm,92.172mm) on Top Overlay And Board Edge </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11019.71mil|Location2.X=11023.334mil|Location1.Y=46010.575mil|Location2.Y=46014.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11019.71mil|Location2.X=11023.334mil|Location1.Y=46010.575mil|Location2.Y=46014.199mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (125.85mm,135.697mm)(125.85mm,142.497mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11382.899mil|Location2.X=11386.523mil|Location1.Y=46009.222mil|Location2.Y=46012.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11382.899mil|Location2.X=11386.523mil|Location1.Y=46009.222mil|Location2.Y=46012.846mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (125.85mm,142.497mm)(144.3mm,142.497mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11019.712mil|Location2.X=11023.336mil|Location1.Y=40988.307mil|Location2.Y=40991.931mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11019.712mil|Location2.X=11023.336mil|Location1.Y=40988.307mil|Location2.Y=40991.931mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (125.85mm,15mm)(125.85mm,21.8mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11382.901mil|Location2.X=11386.525mil|Location1.Y=40989.66mil|Location2.Y=40993.284mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11382.901mil|Location2.X=11386.525mil|Location1.Y=40989.66mil|Location2.Y=40993.284mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (125.85mm,15mm)(144.3mm,15mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11746.088mil|Location2.X=11749.712mil|Location1.Y=45910.797mil|Location2.Y=45914.421mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11746.088mil|Location2.X=11749.712mil|Location1.Y=45910.797mil|Location2.Y=45914.421mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (144.3mm,137.497mm)(144.3mm,142.497mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11746.09mil|Location2.X=11749.714mil|Location1.Y=41088.085mil|Location2.Y=41091.709mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11746.09mil|Location2.X=11749.714mil|Location1.Y=41088.085mil|Location2.Y=41091.709mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (144.3mm,15mm)(144.3mm,20mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11820.89mil|Location2.X=11824.514mil|Location1.Y=45910.797mil|Location2.Y=45914.421mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11820.89mil|Location2.X=11824.514mil|Location1.Y=45910.797mil|Location2.Y=45914.421mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (146.2mm,137.497mm)(146.2mm,142.497mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12715.575mil|Location2.X=12719.199mil|Location1.Y=46009.222mil|Location2.Y=46012.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12715.575mil|Location2.X=12719.199mil|Location1.Y=46009.222mil|Location2.Y=46012.846mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (146.2mm,142.497mm)(191.65mm,142.497mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11820.892mil|Location2.X=11824.516mil|Location1.Y=41087.147mil|Location2.Y=41090.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11820.892mil|Location2.X=11824.516mil|Location1.Y=41087.147mil|Location2.Y=41090.772mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (146.2mm,15mm)(146.2mm,20mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12715.577mil|Location2.X=12719.201mil|Location1.Y=40988.722mil|Location2.Y=40992.346mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12715.577mil|Location2.X=12719.201mil|Location1.Y=40988.722mil|Location2.Y=40992.346mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (146.2mm,15mm)(191.65mm,15mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6654.184mil|Location2.X=6657.809mil|Location1.Y=44794.904mil|Location2.Y=44798.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6654.184mil|Location2.X=6657.809mil|Location1.Y=44794.904mil|Location2.Y=44798.528mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (15mm,111.653mm)(21.8mm,111.653mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6655.538mil|Location2.X=6659.162mil|Location1.Y=43099.039mil|Location2.Y=43102.663mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6655.538mil|Location2.X=6659.162mil|Location1.Y=43099.039mil|Location2.Y=43102.663mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (15mm,45.853mm)(15mm,91.303mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6654.184mil|Location2.X=6657.809mil|Location1.Y=42204.354mil|Location2.Y=42207.978mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6654.184mil|Location2.X=6657.809mil|Location1.Y=42204.354mil|Location2.Y=42207.978mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (15mm,45.853mm)(21.8mm,45.853mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6753.964mil|Location2.X=6757.588mil|Location1.Y=43993.724mil|Location2.Y=43997.348mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6753.964mil|Location2.X=6757.588mil|Location1.Y=43993.724mil|Location2.Y=43997.348mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (15mm,91.303mm)(20mm,91.303mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6655.538mil|Location2.X=6659.162mil|Location1.Y=44431.715mil|Location2.Y=44435.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6655.538mil|Location2.X=6659.162mil|Location1.Y=44431.715mil|Location2.Y=44435.339mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (15mm,93.203mm)(15mm,111.653mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6753.963mil|Location2.X=6757.588mil|Location1.Y=44068.526mil|Location2.Y=44072.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6753.963mil|Location2.X=6757.588mil|Location1.Y=44068.526mil|Location2.Y=44072.15mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (15mm,93.203mm)(20mm,93.203mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13610.26mil|Location2.X=13613.884mil|Location1.Y=46010.575mil|Location2.Y=46014.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13610.26mil|Location2.X=13613.884mil|Location1.Y=46010.575mil|Location2.Y=46014.199mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (191.65mm,135.697mm)(191.65mm,142.497mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13610.262mil|Location2.X=13613.886mil|Location1.Y=40988.307mil|Location2.Y=40991.931mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13610.262mil|Location2.X=13613.886mil|Location1.Y=40988.307mil|Location2.Y=40991.931mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (191.65mm,15mm)(191.65mm,21.8mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 11:06:29<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17975.789mil|Location2.X=17979.413mil|Location1.Y=44794.654mil|Location2.Y=44798.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17975.789mil|Location2.X=17979.413mil|Location1.Y=44794.654mil|Location2.Y=44798.278mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (295.7mm,111.647mm)(302.5mm,111.647mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17975.789mil|Location2.X=17979.413mil|Location1.Y=42204.102mil|Location2.Y=42207.726mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17975.789mil|Location2.X=17979.413mil|Location1.Y=42204.102mil|Location2.Y=42207.726mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (295.7mm,45.847mm)(302.5mm,45.847mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17876.011mil|Location2.X=17879.636mil|Location1.Y=43993.472mil|Location2.Y=43997.096mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17876.011mil|Location2.X=17879.636mil|Location1.Y=43993.472mil|Location2.Y=43997.096mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (297.5mm,91.297mm)(302.5mm,91.297mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17876.011mil|Location2.X=17879.635mil|Location1.Y=44068.276mil|Location2.Y=44071.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17876.011mil|Location2.X=17879.635mil|Location1.Y=44068.276mil|Location2.Y=44071.9mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (297.5mm,93.197mm)(302.5mm,93.197mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17974.436mil|Location2.X=17978.06mil|Location1.Y=43098.787mil|Location2.Y=43102.411mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17974.436mil|Location2.X=17978.06mil|Location1.Y=43098.787mil|Location2.Y=43102.411mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (302.5mm,45.847mm)(302.5mm,91.297mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17974.436mil|Location2.X=17978.06mil|Location1.Y=44431.465mil|Location2.Y=44435.089mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=17974.436mil|Location2.X=17978.06mil|Location1.Y=44431.465mil|Location2.Y=44435.089mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.1mm) Between Board Edge And Track (302.5mm,93.197mm)(302.5mm,111.647mm) on Top Overlay </acronym></a><br>Waived by Karolis Juozapaitis at 06/12/2022 21:19:52<br>overlay was used as positioning for some components<br>Some component overlay positioning is incorrect</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
