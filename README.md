@@ -19,7 +19,8 @@ To make a modular, batery powered, wirelessly controlled RGB LED display board, 
 - Pictures - Project pictures and so on
 
 # Libraries used
-- Library + Recources https://github.com/hzeller/rpi-rgb-led-matrix
+- LED Matrix Library + Recources https://github.com/hzeller/rpi-rgb-led-matrix
+- ADS1x15 I2C ADC library https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/python-circuitpython
 
 # Sources
 - https://www.raspberrypi.org/
