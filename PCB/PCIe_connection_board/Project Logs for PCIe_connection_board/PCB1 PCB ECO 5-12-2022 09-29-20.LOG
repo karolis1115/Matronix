@@ -1,0 +1,11 @@
+Added Component: Designator=P?(AMPHENOL_G630H9812248EU)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Class: Name=PCIe_connection_board
+Added Room: Name=PCIe_connection_board

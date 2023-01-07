@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=GND Pin=P1-A1
+Removed Pin From Net: NetName=GND Pin=P1-A2
+Removed Pin From Net: NetName=GND Pin=P1-A3
+Removed Pin From Net: NetName=GND Pin=P1-A4
+Removed Pin From Net: NetName=GND Pin=P1-A5
+Removed Pin From Net: NetName=GND Pin=P1-A6
+Removed Pin From Net: NetName=GND Pin=P1-A7
+Removed Pin From Net: NetName=GND Pin=P1-A8
+Removed Pin From Net: NetName=GND Pin=P1-A9
+Removed Pin From Net: NetName=GND Pin=P1-A10
+Removed Pin From Net: NetName=GND Pin=P1-A11
+Removed Pin From Net: NetName=5V Pin=P1-B1
+Removed Pin From Net: NetName=5V Pin=P1-B2
+Removed Pin From Net: NetName=5V Pin=P1-B3
+Removed Pin From Net: NetName=5V Pin=P1-B4
+Removed Pin From Net: NetName=5V Pin=P1-B5
+Removed Pin From Net: NetName=5V Pin=P1-B6
+Removed Pin From Net: NetName=5V Pin=P1-B7
+Removed Pin From Net: NetName=5V Pin=P1-B8
+Removed Pin From Net: NetName=5V Pin=P1-B9
+Removed Pin From Net: NetName=5V Pin=P1-B10
+Removed Pin From Net: NetName=5V Pin=P1-B11
+Added Room: Name=3v3--5V Logic Level Conversion
+Added Room: Name=ADC
+Added Room: Name=Board Edge Connectors
+Added Room: Name=Display&Baterry detection
+Added Room: Name=DIsplay_IO
+Added Room: Name=Raspberry pi Connector

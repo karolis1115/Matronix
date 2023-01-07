@@ -1,0 +1,89 @@
+Removed Pin From Net: NetName=GND Pin=P3-A1
+Removed Pin From Net: NetName=GND Pin=P3-A2
+Removed Pin From Net: NetName=GND Pin=P3-A3
+Removed Pin From Net: NetName=GND Pin=P3-A4
+Removed Pin From Net: NetName=GND Pin=P3-A5
+Removed Pin From Net: NetName=GND Pin=P3-A6
+Removed Pin From Net: NetName=GND Pin=P3-A7
+Removed Pin From Net: NetName=GND Pin=P3-A8
+Removed Pin From Net: NetName=GND Pin=P3-A9
+Removed Pin From Net: NetName=GND Pin=P3-A10
+Removed Pin From Net: NetName=GND Pin=P3-A11
+Removed Pin From Net: NetName=5V Pin=P3-B1
+Removed Pin From Net: NetName=5V Pin=P3-B2
+Removed Pin From Net: NetName=5V Pin=P3-B3
+Removed Pin From Net: NetName=5V Pin=P3-B4
+Removed Pin From Net: NetName=5V Pin=P3-B5
+Removed Pin From Net: NetName=5V Pin=P3-B6
+Removed Pin From Net: NetName=5V Pin=P3-B7
+Removed Pin From Net: NetName=5V Pin=P3-B8
+Removed Pin From Net: NetName=5V Pin=P3-B9
+Removed Pin From Net: NetName=5V Pin=P3-B10
+Removed Pin From Net: NetName=5V Pin=P3-B11
+Removed Pin From Net: NetName=R1_C_BUFF Pin=P3-B20
+Removed Pin From Net: NetName=B1_C_BUFF Pin=P3-B21
+Removed Pin From Net: NetName=R2_C_BUFF Pin=P3-B22
+Removed Pin From Net: NetName=B2_C_BUFF Pin=P3-B23
+Removed Pin From Net: NetName=A_BUFF Pin=P3-B24
+Removed Pin From Net: NetName=C_BUFF Pin=P3-B25
+Removed Pin From Net: NetName=CLK_C_BUFF Pin=P3-B26
+Removed Pin From Net: NetName=OE_C_BUFF Pin=P3-B27
+Removed Pin From Net: NetName=G1_C_BUFF Pin=P3-B28
+Removed Pin From Net: NetName=G2_C_BUFF Pin=P3-B29
+Removed Pin From Net: NetName=B_BUFF Pin=P3-B30
+Removed Pin From Net: NetName=D_BUFF Pin=P3-B31
+Removed Pin From Net: NetName=LAT_C_BUFF Pin=P3-B32
+Removed Pin From Net: NetName=E_BUFF Pin=P3-B40
+Removed Pin From Net: NetName=AIN2 Pin=P3-B41
+Removed Pin From Net: NetName=AIN3 Pin=P3-B42
+Removed Pin From Net: NetName=DISP_SENSE_C Pin=P3-B48
+Removed Pin From Net: NetName=BAT_SENSE_C Pin=P3-B49
+Removed Member From Class: ClassName=Display Member=P3
+Added Component: Designator=J(SAMTEC_PCIE-098-02-X-D-EMS2-BG)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Samtec Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "PCIE-098-02-X-D-EMS2-BG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J-A01
+Added Pin To Net: NetName=GND Pin=J-A02
+Added Pin To Net: NetName=GND Pin=J-A03
+Added Pin To Net: NetName=GND Pin=J-A04
+Added Pin To Net: NetName=GND Pin=J-A05
+Added Pin To Net: NetName=GND Pin=J-A06
+Added Pin To Net: NetName=GND Pin=J-A07
+Added Pin To Net: NetName=GND Pin=J-A08
+Added Pin To Net: NetName=GND Pin=J-A09
+Added Pin To Net: NetName=GND Pin=J-A10
+Added Pin To Net: NetName=GND Pin=J-A11
+Added Pin To Net: NetName=5V Pin=J-B01
+Added Pin To Net: NetName=5V Pin=J-B02
+Added Pin To Net: NetName=5V Pin=J-B03
+Added Pin To Net: NetName=5V Pin=J-B04
+Added Pin To Net: NetName=5V Pin=J-B05
+Added Pin To Net: NetName=5V Pin=J-B06
+Added Pin To Net: NetName=5V Pin=J-B07
+Added Pin To Net: NetName=5V Pin=J-B08
+Added Pin To Net: NetName=5V Pin=J-B09
+Added Pin To Net: NetName=5V Pin=J-B10
+Added Pin To Net: NetName=5V Pin=J-B11
+Added Pin To Net: NetName=R1_C_BUFF Pin=J-B20
+Added Pin To Net: NetName=B1_C_BUFF Pin=J-B21
+Added Pin To Net: NetName=R2_C_BUFF Pin=J-B22
+Added Pin To Net: NetName=B2_C_BUFF Pin=J-B23
+Added Pin To Net: NetName=A_BUFF Pin=J-B24
+Added Pin To Net: NetName=C_BUFF Pin=J-B25
+Added Pin To Net: NetName=CLK_C_BUFF Pin=J-B26
+Added Pin To Net: NetName=OE_C_BUFF Pin=J-B27
+Added Pin To Net: NetName=G1_C_BUFF Pin=J-B28
+Added Pin To Net: NetName=G2_C_BUFF Pin=J-B29
+Added Pin To Net: NetName=B_BUFF Pin=J-B30
+Added Pin To Net: NetName=D_BUFF Pin=J-B31
+Added Pin To Net: NetName=LAT_C_BUFF Pin=J-B32
+Added Pin To Net: NetName=E_BUFF Pin=J-B40
+Added Pin To Net: NetName=AIN2 Pin=J-B41
+Added Pin To Net: NetName=AIN3 Pin=J-B42
+Added Pin To Net: NetName=DISP_SENSE_C Pin=J-B48
+Added Pin To Net: NetName=BAT_SENSE_C Pin=J-B49
+Added Member To Class: ClassName=Display Member=Component J PCIE-098-02-X-D-EMS2-BG

@@ -1,0 +1,5 @@
+Removed Member From Class: ClassName=Sheet1 Member=R?
+Change Component Designator: OldDesignator=R1 NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Added Member To Class: ClassName=Sheet1 Member=Component R2 RC1206JR-070RL
+Added Room: Name=Sheet1

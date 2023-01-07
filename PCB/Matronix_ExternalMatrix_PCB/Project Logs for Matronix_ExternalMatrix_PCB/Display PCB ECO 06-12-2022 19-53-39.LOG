@@ -1,0 +1,210 @@
+Removed Pin From Net: NetName=GND Pin=P3-A1
+Removed Pin From Net: NetName=GND Pin=P3-A2
+Removed Pin From Net: NetName=GND Pin=P3-A3
+Removed Pin From Net: NetName=GND Pin=P3-A4
+Removed Pin From Net: NetName=GND Pin=P3-A5
+Removed Pin From Net: NetName=GND Pin=P3-A6
+Removed Pin From Net: NetName=GND Pin=P3-A7
+Removed Pin From Net: NetName=GND Pin=P3-A8
+Removed Pin From Net: NetName=GND Pin=P3-A9
+Removed Pin From Net: NetName=GND Pin=P3-A10
+Removed Pin From Net: NetName=GND Pin=P3-A11
+Removed Pin From Net: NetName=5V Pin=P3-B1
+Removed Pin From Net: NetName=5V Pin=P3-B2
+Removed Pin From Net: NetName=5V Pin=P3-B3
+Removed Pin From Net: NetName=5V Pin=P3-B4
+Removed Pin From Net: NetName=5V Pin=P3-B5
+Removed Pin From Net: NetName=5V Pin=P3-B6
+Removed Pin From Net: NetName=5V Pin=P3-B7
+Removed Pin From Net: NetName=5V Pin=P3-B8
+Removed Pin From Net: NetName=5V Pin=P3-B9
+Removed Pin From Net: NetName=5V Pin=P3-B10
+Removed Pin From Net: NetName=5V Pin=P3-B11
+Removed Pin From Net: NetName=E_BUFF Pin=P3-B40
+Removed Pin From Net: NetName=AIN2 Pin=P3-B41
+Removed Pin From Net: NetName=AIN3 Pin=P3-B42
+Removed Pin From Net: NetName=GND Pin=P4-A1
+Removed Pin From Net: NetName=GND Pin=P4-A2
+Removed Pin From Net: NetName=GND Pin=P4-A3
+Removed Pin From Net: NetName=GND Pin=P4-A4
+Removed Pin From Net: NetName=GND Pin=P4-A5
+Removed Pin From Net: NetName=GND Pin=P4-A6
+Removed Pin From Net: NetName=GND Pin=P4-A7
+Removed Pin From Net: NetName=GND Pin=P4-A8
+Removed Pin From Net: NetName=GND Pin=P4-A9
+Removed Pin From Net: NetName=GND Pin=P4-A10
+Removed Pin From Net: NetName=GND Pin=P4-A11
+Removed Pin From Net: NetName=5V Pin=P4-B1
+Removed Pin From Net: NetName=5V Pin=P4-B2
+Removed Pin From Net: NetName=5V Pin=P4-B3
+Removed Pin From Net: NetName=5V Pin=P4-B4
+Removed Pin From Net: NetName=5V Pin=P4-B5
+Removed Pin From Net: NetName=5V Pin=P4-B6
+Removed Pin From Net: NetName=5V Pin=P4-B7
+Removed Pin From Net: NetName=5V Pin=P4-B8
+Removed Pin From Net: NetName=5V Pin=P4-B9
+Removed Pin From Net: NetName=5V Pin=P4-B10
+Removed Pin From Net: NetName=5V Pin=P4-B11
+Removed Pin From Net: NetName=E_BUFF Pin=P4-B40
+Removed Pin From Net: NetName=AIN2 Pin=P4-B41
+Removed Pin From Net: NetName=AIN3 Pin=P4-B42
+Added Component: Designator=J1(17477851)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1747785-1/te-connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1747785%7FD%7Fpdf%7FEnglish%7FENG_CD_1747785_D.pdf%7F1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "5.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "571-1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/1747785-1?qs=wds1f20rnm3JQGfMkfdK9A%3D%3D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=J1-1
+Added Pin To Net: NetName=5V Pin=J1-2
+Added Pin To Net: NetName=5V Pin=J1-3
+Added Pin To Net: NetName=GND Pin=J1-7
+Added Pin To Net: NetName=GND Pin=J1-8
+Added Pin To Net: NetName=GND Pin=J1-MH1
+Added Pin To Net: NetName=GND Pin=J1-MH2
+Added Pin To Net: NetName=5V Pin=P3-A1
+Added Pin To Net: NetName=5V Pin=P3-A2
+Added Pin To Net: NetName=5V Pin=P3-A3
+Added Pin To Net: NetName=5V Pin=P3-A4
+Added Pin To Net: NetName=5V Pin=P3-A5
+Added Pin To Net: NetName=5V Pin=P3-A6
+Added Pin To Net: NetName=5V Pin=P3-A7
+Added Pin To Net: NetName=5V Pin=P3-A8
+Added Pin To Net: NetName=5V Pin=P3-A9
+Added Pin To Net: NetName=5V Pin=P3-A10
+Added Pin To Net: NetName=5V Pin=P3-A11
+Added Pin To Net: NetName=E_BUFF Pin=P3-A40
+Added Pin To Net: NetName=AIN2 Pin=P3-A41
+Added Pin To Net: NetName=AIN3 Pin=P3-A42
+Added Pin To Net: NetName=GND Pin=P3-B1
+Added Pin To Net: NetName=GND Pin=P3-B2
+Added Pin To Net: NetName=GND Pin=P3-B3
+Added Pin To Net: NetName=GND Pin=P3-B4
+Added Pin To Net: NetName=GND Pin=P3-B5
+Added Pin To Net: NetName=GND Pin=P3-B6
+Added Pin To Net: NetName=GND Pin=P3-B7
+Added Pin To Net: NetName=GND Pin=P3-B8
+Added Pin To Net: NetName=GND Pin=P3-B9
+Added Pin To Net: NetName=GND Pin=P3-B10
+Added Pin To Net: NetName=GND Pin=P3-B11
+Added Pin To Net: NetName=5V Pin=P4-A1
+Added Pin To Net: NetName=5V Pin=P4-A2
+Added Pin To Net: NetName=5V Pin=P4-A3
+Added Pin To Net: NetName=5V Pin=P4-A4
+Added Pin To Net: NetName=5V Pin=P4-A5
+Added Pin To Net: NetName=5V Pin=P4-A6
+Added Pin To Net: NetName=5V Pin=P4-A7
+Added Pin To Net: NetName=5V Pin=P4-A8
+Added Pin To Net: NetName=5V Pin=P4-A9
+Added Pin To Net: NetName=5V Pin=P4-A10
+Added Pin To Net: NetName=5V Pin=P4-A11
+Added Pin To Net: NetName=E_BUFF Pin=P4-A40
+Added Pin To Net: NetName=AIN2 Pin=P4-A41
+Added Pin To Net: NetName=AIN3 Pin=P4-A42
+Added Pin To Net: NetName=GND Pin=P4-B1
+Added Pin To Net: NetName=GND Pin=P4-B2
+Added Pin To Net: NetName=GND Pin=P4-B3
+Added Pin To Net: NetName=GND Pin=P4-B4
+Added Pin To Net: NetName=GND Pin=P4-B5
+Added Pin To Net: NetName=GND Pin=P4-B6
+Added Pin To Net: NetName=GND Pin=P4-B7
+Added Pin To Net: NetName=GND Pin=P4-B8
+Added Pin To Net: NetName=GND Pin=P4-B9
+Added Pin To Net: NetName=GND Pin=P4-B10
+Added Pin To Net: NetName=GND Pin=P4-B11
+Added Pin To Net: NetName=GND Pin=R1-2
+Added Pin To Net: NetName=A Pin=P2-A24
+Added Pin To Net: NetName=A Pin=P3-A24
+Added Pin To Net: NetName=A Pin=P4-A24
+Added Pin To Net: NetName=A Pin=P5-9
+Added Net: Name=A
+Added Pin To Net: NetName=B1 Pin=P2-A21
+Added Pin To Net: NetName=B1 Pin=P3-A21
+Added Pin To Net: NetName=B1 Pin=P4-A21
+Added Pin To Net: NetName=B1 Pin=P5-3
+Added Net: Name=B1
+Added Pin To Net: NetName=B2 Pin=P2-A23
+Added Pin To Net: NetName=B2 Pin=P3-A23
+Added Pin To Net: NetName=B2 Pin=P4-A23
+Added Pin To Net: NetName=B2 Pin=P5-7
+Added Net: Name=B2
+Added Pin To Net: NetName=BAT_SENSE Pin=J1-6
+Added Pin To Net: NetName=BAT_SENSE Pin=P1-A49
+Added Pin To Net: NetName=BAT_SENSE Pin=P2-A49
+Added Pin To Net: NetName=BAT_SENSE Pin=P3-A49
+Added Pin To Net: NetName=BAT_SENSE Pin=P4-A49
+Added Pin To Net: NetName=BAT_SENSE Pin=R1-1
+Added Net: Name=BAT_SENSE
+Added Pin To Net: NetName=B Pin=P2-A30
+Added Pin To Net: NetName=B Pin=P3-A30
+Added Pin To Net: NetName=B Pin=P4-A30
+Added Pin To Net: NetName=B Pin=P5-10
+Added Net: Name=B
+Added Pin To Net: NetName=CLK Pin=P2-A26
+Added Pin To Net: NetName=CLK Pin=P3-A26
+Added Pin To Net: NetName=CLK Pin=P4-A26
+Added Pin To Net: NetName=CLK Pin=P5-13
+Added Net: Name=CLK
+Added Pin To Net: NetName=C Pin=P2-A25
+Added Pin To Net: NetName=C Pin=P3-A25
+Added Pin To Net: NetName=C Pin=P4-A25
+Added Pin To Net: NetName=C Pin=P5-11
+Added Net: Name=C
+Added Pin To Net: NetName=DISP_SENSE Pin=P1-A48
+Added Pin To Net: NetName=DISP_SENSE Pin=P2-A48
+Added Pin To Net: NetName=DISP_SENSE Pin=P3-A48
+Added Pin To Net: NetName=DISP_SENSE Pin=P4-A48
+Added Net: Name=DISP_SENSE
+Added Pin To Net: NetName=D Pin=P2-A31
+Added Pin To Net: NetName=D Pin=P3-A31
+Added Pin To Net: NetName=D Pin=P4-A31
+Added Pin To Net: NetName=D Pin=P5-12
+Added Net: Name=D
+Added Pin To Net: NetName=G1 Pin=P2-A28
+Added Pin To Net: NetName=G1 Pin=P3-A28
+Added Pin To Net: NetName=G1 Pin=P4-A28
+Added Pin To Net: NetName=G1 Pin=P5-2
+Added Net: Name=G1
+Added Pin To Net: NetName=G2 Pin=P2-A29
+Added Pin To Net: NetName=G2 Pin=P3-A29
+Added Pin To Net: NetName=G2 Pin=P4-A29
+Added Pin To Net: NetName=G2 Pin=P5-6
+Added Net: Name=G2
+Added Pin To Net: NetName=LAT Pin=P2-A32
+Added Pin To Net: NetName=LAT Pin=P3-A32
+Added Pin To Net: NetName=LAT Pin=P4-A32
+Added Pin To Net: NetName=LAT Pin=P5-14
+Added Net: Name=LAT
+Added Pin To Net: NetName=OE Pin=P2-A27
+Added Pin To Net: NetName=OE Pin=P3-A27
+Added Pin To Net: NetName=OE Pin=P4-A27
+Added Pin To Net: NetName=OE Pin=P5-15
+Added Net: Name=OE
+Added Pin To Net: NetName=R1 Pin=P2-A20
+Added Pin To Net: NetName=R1 Pin=P3-A20
+Added Pin To Net: NetName=R1 Pin=P4-A20
+Added Pin To Net: NetName=R1 Pin=P5-1
+Added Net: Name=R1
+Added Pin To Net: NetName=R2 Pin=P2-A22
+Added Pin To Net: NetName=R2 Pin=P3-A22
+Added Pin To Net: NetName=R2 Pin=P4-A22
+Added Pin To Net: NetName=R2 Pin=P5-5
+Added Net: Name=R2
+Added Pin To Net: NetName=SCL Pin=J1-4
+Added Pin To Net: NetName=SCL Pin=P1-A45
+Added Pin To Net: NetName=SCL Pin=P2-A45
+Added Pin To Net: NetName=SCL Pin=P3-A45
+Added Pin To Net: NetName=SCL Pin=P4-A45
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA Pin=J1-5
+Added Pin To Net: NetName=SDA Pin=P1-A44
+Added Pin To Net: NetName=SDA Pin=P2-A44
+Added Pin To Net: NetName=SDA Pin=P3-A44
+Added Pin To Net: NetName=SDA Pin=P4-A44
+Added Net: Name=SDA
+Added Member To Class: ClassName=Sheet1 Member=Component J1 1747785-1
+Added Member To Class: ClassName=Sheet1 Member=Component P4 G630H9812248EU

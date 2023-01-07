@@ -1,0 +1,579 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">07/12/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21:08:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc" class="file"><acronym title="C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc">C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">70</td></tr>
+</table>
+</td>
+</table><a name="IDOPJWP3EA1HG0BARUDMBFIB3WNIJJRISPJ3JZ2XCBI4BKROIUQPQB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1A2IKLGSWZZOOMBZG32G4FO2SKSYZQR3IJITJIKCEYDLICUVLCMH">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTDBVABNMOI2LB541ZKLEG3B1UIU01OJCTWFOZIMEHV1QY3QIZ2SF">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4LKHNECYD503B5LVRYLHAKJGZHG3EBPI1UMUXGCZBYJG51IKKBAP">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFCLIWMPNGXMXI2Z2W5OAUBATCBMSZUNDXNIC4FOW4X3YFNBTAM4O">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDH2UUJX1AQBQGDOAJCZTS0A54BTAALZDSSPMPLPR3YAQCJMF0CC">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQ4NJYKRLR3USBCYVTRIRFFUCKO5QCOYPZGJC1TCVS5WHBHH4A4GK">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5ARBPIW400T1LFRK04SPEXERQJOYT2RXMFR4CTHOUHJ3QQ3WV1CO">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGODSFVUR4WQ1O2YPOQWXG3P4BCMTW1ROJTCSURJLY4MSBBEI1PMO">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNARZZU1H2OZQF1VPPFCXHRLGJIYJOBJHW5PTACGY3KNGSQK2DSIL">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEBSFSNRLDJBZKBRQGKRDYJRJCLRG1WTAVWMAY5OMB2LLWPUXR53F">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXIVPZJPGNHBHMS1CSQKA4FXCSFKIYTSDHMP55ZKUMLUMX33JJ2M">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIYA35SPJNSVKHYQYQD0ITMGPJ54MBRCFBMIFZBHUOGC55FZXZ0E">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUSORICLRCAR1PG1QM4M4VLENBNSIC3F0AR4P5MOI1N4Q2FT5VA1O">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFYAYCOL004LAJ3DQ0NBAIJQWKD2DUQYCP3OC1QECW4D1V3EB3KDH">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDXEN054UE4GYINWURNOKMXF3CDV3PFICB50BA5GALEZH2W1FSEVK">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">26</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYHPSN00SPOBWDZ1FBCHO1HK5DPGULDIDTTRQM3L3G4IVA4QFJOOB">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">32</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBTWQMQQ1ACTZH0TYVB40ZWK1JBRPQN23TCT4E0HAZOMTCZU3ACZH">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">70</td>
+</tr>
+</table><br><a name="IDCG3ZS1HKZKQJJZ4HQTEI4G30APQJQ2DPBQOKZUNDIAZBYSPDMNFC"><h2>Rule Violations</h2></a><a name="IDS2PTTHREGDSVPSAUNRCJYVVAIU1XPPLVN0TT1G2AEVJDPBEXWBI"><h2>Waived Violations</h2></a><a name="IDFYAYCOL004LAJ3DQ0NBAIJQWKD2DUQYCP3OC1QECW4D1V3EB3KDH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1323.351mil|Location2.X=1497.829mil|Location1.Y=1752.761mil|Location2.Y=1927.239mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1323.351mil|Location2.X=1497.829mil|Location1.Y=1752.761mil|Location2.Y=1927.239mil|Absolute=True">Hole Size Constraint: (4.4mm &gt; 2.54mm) Pad ENC1-3(35.829mm,46.736mm) on Multi-Layer Actual Slot Hole Height = 4.4mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1772.169mil|Location2.X=1946.647mil|Location1.Y=1752.761mil|Location2.Y=1927.239mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1772.169mil|Location2.X=1946.647mil|Location1.Y=1752.761mil|Location2.Y=1927.239mil|Absolute=True">Hole Size Constraint: (4.4mm &gt; 2.54mm) Pad ENC1-4(47.229mm,46.736mm) on Multi-Layer Actual Slot Hole Height = 4.4mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.353mil|Location2.X=6282.831mil|Location1.Y=1772.761mil|Location2.Y=1947.239mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6108.353mil|Location2.X=6282.831mil|Location1.Y=1772.761mil|Location2.Y=1947.239mil|Absolute=True">Hole Size Constraint: (4.4mm &gt; 2.54mm) Pad ENC2-3(157.368mm,47.244mm) on Multi-Layer Actual Slot Hole Height = 4.4mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6557.171mil|Location2.X=6731.649mil|Location1.Y=1772.761mil|Location2.Y=1947.239mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6557.171mil|Location2.X=6731.649mil|Location1.Y=1772.761mil|Location2.Y=1947.239mil|Absolute=True">Hole Size Constraint: (4.4mm &gt; 2.54mm) Pad ENC2-4(168.768mm,47.244mm) on Multi-Layer Actual Slot Hole Height = 4.4mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5450.95mil|Location2.X=5649.05mil|Location1.Y=4595.95mil|Location2.Y=4794.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5450.95mil|Location2.X=5649.05mil|Location1.Y=4595.95mil|Location2.Y=4794.05mil|Absolute=True">Hole Size Constraint: (5mm &gt; 2.54mm) Pad Free-3(140.97mm,119.253mm) on Multi-Layer Actual Hole Size = 5mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6385.95mil|Location2.X=6584.05mil|Location1.Y=4580.95mil|Location2.Y=4779.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6385.95mil|Location2.X=6584.05mil|Location1.Y=4580.95mil|Location2.Y=4779.05mil|Absolute=True">Hole Size Constraint: (5mm &gt; 2.54mm) Pad Free-3(164.719mm,118.872mm) on Multi-Layer Actual Hole Size = 5mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1370.95mil|Location2.X=1569.05mil|Location1.Y=4625.95mil|Location2.Y=4824.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1370.95mil|Location2.X=1569.05mil|Location1.Y=4625.95mil|Location2.Y=4824.05mil|Absolute=True">Hole Size Constraint: (5mm &gt; 2.54mm) Pad Free-3(37.338mm,120.015mm) on Multi-Layer Actual Hole Size = 5mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2450.95mil|Location2.X=2649.05mil|Location1.Y=4630.95mil|Location2.Y=4829.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2450.95mil|Location2.X=2649.05mil|Location1.Y=4630.95mil|Location2.Y=4829.05mil|Absolute=True">Hole Size Constraint: (5mm &gt; 2.54mm) Pad Free-3(64.77mm,120.142mm) on Multi-Layer Actual Hole Size = 5mm</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDDXEN054UE4GYINWURNOKMXF3CDV3PFICB50BA5GALEZH2W1FSEVK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5884.374mil|Location2.X=5895.624mil|Location1.Y=4027.704mil|Location2.Y=4038.954mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5884.374mil|Location2.X=5895.624mil|Location1.Y=4027.704mil|Location2.Y=4038.954mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.247mm &lt; 0.254mm) Between Pad D1-1(148.686mm,101.645mm) on Top Layer And Pad D1-2(150.526mm,101.645mm) on Top Layer [Top Solder] Mask Sliver [0.247mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4289.69mil|Location2.X=4300.94mil|Location1.Y=4448.967mil|Location2.Y=4460.217mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4289.69mil|Location2.X=4300.94mil|Location1.Y=4448.967mil|Location2.Y=4460.217mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC4-1(108.801mm,113.445mm) on Top Layer And Pad IC4-14(109.601mm,112.895mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4289.69mil|Location2.X=4300.94mil|Location1.Y=4376.132mil|Location2.Y=4387.382mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4289.69mil|Location2.X=4300.94mil|Location1.Y=4376.132mil|Location2.Y=4387.382mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC4-10(108.801mm,110.845mm) on Top Layer And Pad IC4-11(109.601mm,111.395mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4226.698mil|Location2.X=4237.948mil|Location1.Y=4442.935mil|Location2.Y=4454.185mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4226.698mil|Location2.X=4237.948mil|Location1.Y=4442.935mil|Location2.Y=4454.185mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC4-3(107.801mm,113.445mm) on Top Layer And Pad IC4-4(107.001mm,112.895mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4186.139mil|Location2.X=4197.389mil|Location1.Y=4412.349mil|Location2.Y=4423.599mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4186.139mil|Location2.X=4197.389mil|Location1.Y=4412.349mil|Location2.Y=4423.599mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.21mm &lt; 0.254mm) Between Pad IC4-6(107.001mm,111.895mm) on Top Layer And Via (105.842mm,112.776mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.21mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 18:06:44<br>Connector Footprint Violates DRC Ignore Violation</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4226.698mil|Location2.X=4237.948mil|Location1.Y=4376.132mil|Location2.Y=4387.382mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4226.698mil|Location2.X=4237.948mil|Location1.Y=4376.132mil|Location2.Y=4387.382mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC4-7(107.001mm,111.395mm) on Top Layer And Pad IC4-8(107.801mm,110.845mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3889.613mil|Location2.X=3900.863mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3889.613mil|Location2.X=3900.863mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A1(98.889mm,116.832mm) on Top Layer And Pad IC5-B12(98.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3722.009mil|Location2.X=3734.796mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3722.009mil|Location2.X=3734.796mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.173mm &lt; 0.254mm) Between Pad IC5-A10(94.389mm,116.832mm) on Top Layer And Pad IC5-B4(94.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3700.579mil|Location2.X=3711.829mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3700.579mil|Location2.X=3711.829mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A10(94.389mm,116.832mm) on Top Layer And Pad IC5-G2(94.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3679.262mil|Location2.X=3692.001mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3679.262mil|Location2.X=3692.001mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.173mm &lt; 0.254mm) Between Pad IC5-A11(93.889mm,116.832mm) on Top Layer And Pad IC5-B1(93.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3700.635mil|Location2.X=3711.885mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3700.635mil|Location2.X=3711.885mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A11(93.889mm,116.832mm) on Top Layer And Pad IC5-G2(94.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3669.139mil|Location2.X=3680.389mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3669.139mil|Location2.X=3680.389mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A12(93.389mm,116.832mm) on Top Layer And Pad IC5-B1(93.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3879.49mil|Location2.X=3892.277mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3879.49mil|Location2.X=3892.277mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.173mm &lt; 0.254mm) Between Pad IC5-A2(98.389mm,116.832mm) on Top Layer And Pad IC5-B12(98.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3858.059mil|Location2.X=3869.309mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3858.059mil|Location2.X=3869.309mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A2(98.389mm,116.832mm) on Top Layer And Pad IC5-G1(98.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3836.742mil|Location2.X=3849.481mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3836.742mil|Location2.X=3849.481mil|Location1.Y=4624.668mil|Location2.Y=4635.918mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.173mm &lt; 0.254mm) Between Pad IC5-A3(97.889mm,116.832mm) on Top Layer And Pad IC5-B9(97.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3858.117mil|Location2.X=3869.367mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3858.117mil|Location2.X=3869.367mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A3(97.889mm,116.832mm) on Top Layer And Pad IC5-G1(98.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3826.619mil|Location2.X=3837.869mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3826.619mil|Location2.X=3837.869mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A4(97.389mm,116.832mm) on Top Layer And Pad IC5-B9(97.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3798.63mil|Location2.X=3809.88mil|Location1.Y=4623.727mil|Location2.Y=4634.977mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3798.63mil|Location2.X=3809.88mil|Location1.Y=4623.727mil|Location2.Y=4634.977mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.106mm &lt; 0.254mm) Between Pad IC5-A5(96.889mm,116.832mm) on Top Layer And Pad IC5-B7(96.539mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.106mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3819.69mil|Location2.X=3833.158mil|Location1.Y=4624.117mil|Location2.Y=4635.367mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3819.69mil|Location2.X=3833.158mil|Location1.Y=4624.117mil|Location2.Y=4635.367mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.132mm &lt; 0.254mm) Between Pad IC5-A5(96.889mm,116.832mm) on Top Layer And Pad IC5-B9(97.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.132mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3776.695mil|Location2.X=3788.615mil|Location1.Y=4625.285mil|Location2.Y=4636.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3776.695mil|Location2.X=3788.615mil|Location1.Y=4625.285mil|Location2.Y=4636.535mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.226mm &lt; 0.254mm) Between Pad IC5-A6(96.389mm,116.832mm) on Top Layer And Pad IC5-B6(95.739mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.226mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3795.123mil|Location2.X=3806.373mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3795.123mil|Location2.X=3806.373mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A6(96.389mm,116.832mm) on Top Layer And Pad IC5-B7(96.539mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3763.627mil|Location2.X=3774.877mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3763.627mil|Location2.X=3774.877mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A7(95.889mm,116.832mm) on Top Layer And Pad IC5-B6(95.739mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3782.056mil|Location2.X=3794.035mil|Location1.Y=4625.284mil|Location2.Y=4636.534mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3782.056mil|Location2.X=3794.035mil|Location1.Y=4625.284mil|Location2.Y=4636.534mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.226mm &lt; 0.254mm) Between Pad IC5-A7(95.889mm,116.832mm) on Top Layer And Pad IC5-B7(96.539mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.226mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3739.062mil|Location2.X=3752.496mil|Location1.Y=4624.118mil|Location2.Y=4635.368mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3739.062mil|Location2.X=3752.496mil|Location1.Y=4624.118mil|Location2.Y=4635.368mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.132mm &lt; 0.254mm) Between Pad IC5-A8(95.389mm,116.832mm) on Top Layer And Pad IC5-B4(94.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.132mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3760.121mil|Location2.X=3771.371mil|Location1.Y=4623.727mil|Location2.Y=4634.977mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3760.121mil|Location2.X=3771.371mil|Location1.Y=4623.727mil|Location2.Y=4634.977mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.106mm &lt; 0.254mm) Between Pad IC5-A8(95.389mm,116.832mm) on Top Layer And Pad IC5-B6(95.739mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.106mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3732.131mil|Location2.X=3743.381mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3732.131mil|Location2.X=3743.381mil|Location1.Y=4623.587mil|Location2.Y=4634.837mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad IC5-A9(94.889mm,116.832mm) on Top Layer And Pad IC5-B4(94.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYHPSN00SPOBWDZ1FBCHO1HK5DPGULDIDTTRQM3L3G4IVA4QFJOOB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1601.658mil|Location2.X=1612.908mil|Location1.Y=3247.585mil|Location2.Y=3258.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1601.658mil|Location2.X=1612.908mil|Location1.Y=3247.585mil|Location2.Y=3258.835mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-1(41.275mm,83.394mm) on Top Layer And Track (40.6mm,82.631mm)(40.6mm,84.156mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1606.58mil|Location2.X=1617.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1606.58mil|Location2.X=1617.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-1(41.275mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1656.58mil|Location2.X=1667.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1656.58mil|Location2.X=1667.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-2(42.545mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1706.58mil|Location2.X=1717.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1706.58mil|Location2.X=1717.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-3(43.815mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1756.58mil|Location2.X=1767.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1756.58mil|Location2.X=1767.83mil|Location1.Y=3312.536mil|Location2.Y=3323.786mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-4(45.085mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1782.17mil|Location2.X=1793.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1782.17mil|Location2.X=1793.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-5(45.085mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1732.17mil|Location2.X=1743.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1732.17mil|Location2.X=1743.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-6(43.815mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.17mil|Location2.X=1693.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.17mil|Location2.X=1693.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-7(42.545mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1632.17mil|Location2.X=1643.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1632.17mil|Location2.X=1643.42mil|Location1.Y=3456.218mil|Location2.Y=3467.468mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC1-8(41.275mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 18:06:44<br>Connector Footprint Violates DRC Ignore Violation</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2806.58mil|Location2.Y=2817.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2806.58mil|Location2.Y=2817.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC2-1(125.902mm,71.755mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4981.165mil|Location2.X=4992.415mil|Location1.Y=2801.659mil|Location2.Y=2812.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4981.165mil|Location2.X=4992.415mil|Location1.Y=2801.659mil|Location2.Y=2812.909mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC2-1(125.902mm,71.755mm) on Top Layer And Track (125.14mm,71.08mm)(126.665mm,71.08mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2856.58mil|Location2.Y=2867.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2856.58mil|Location2.Y=2867.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC2-2(125.902mm,73.025mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2906.58mil|Location2.Y=2917.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2906.58mil|Location2.Y=2917.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC2-3(125.902mm,74.295mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2956.58mil|Location2.Y=2967.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4916.215mil|Location2.X=4927.465mil|Location1.Y=2956.58mil|Location2.Y=2967.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC2-4(125.902mm,75.565mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2956.58mil|Location2.Y=2967.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2956.58mil|Location2.Y=2967.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC2-5(120.478mm,75.565mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2906.58mil|Location2.Y=2917.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2906.58mil|Location2.Y=2917.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC2-6(120.478mm,74.295mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2856.58mil|Location2.Y=2867.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2856.58mil|Location2.Y=2867.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC2-7(120.478mm,73.025mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2806.58mil|Location2.Y=2817.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4772.534mil|Location2.X=4783.784mil|Location1.Y=2806.58mil|Location2.Y=2817.83mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC2-8(120.478mm,71.755mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2111.658mil|Location2.X=2122.908mil|Location1.Y=3247.585mil|Location2.Y=3258.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2111.658mil|Location2.X=2122.908mil|Location1.Y=3247.585mil|Location2.Y=3258.835mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC3-1(54.229mm,83.394mm) on Top Layer And Track (53.554mm,82.631mm)(53.554mm,84.156mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2116.58mil|Location2.X=2127.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2116.58mil|Location2.X=2127.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC3-1(54.229mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2166.58mil|Location2.X=2177.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2166.58mil|Location2.X=2177.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC3-2(55.499mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2216.58mil|Location2.X=2227.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2216.58mil|Location2.X=2227.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC3-3(56.769mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.58mil|Location2.X=2277.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2266.58mil|Location2.X=2277.83mil|Location1.Y=3312.535mil|Location2.Y=3323.785mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad IC3-4(58.039mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2292.17mil|Location2.X=2303.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2292.17mil|Location2.X=2303.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC3-5(58.039mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2242.17mil|Location2.X=2253.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2242.17mil|Location2.X=2253.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC3-6(56.769mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2192.17mil|Location2.X=2203.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2192.17mil|Location2.X=2203.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC3-7(55.499mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 18:06:44<br>Connector Footprint Violates DRC Ignore Violation</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2142.17mil|Location2.X=2153.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2142.17mil|Location2.X=2153.42mil|Location1.Y=3456.216mil|Location2.Y=3467.466mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC3-8(54.229mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.855mil|Location2.X=3962.105mil|Location1.Y=4644.797mil|Location2.Y=4656.047mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.855mil|Location2.X=3962.105mil|Location1.Y=4644.797mil|Location2.Y=4656.047mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.219mm &lt; 0.254mm) Between Pad IC5-MH1(100.409mm,119.232mm) on Multi-Layer And Track (100.509mm,117.002mm)(100.509mm,117.962mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.219mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3607.897mil|Location2.X=3619.147mil|Location1.Y=4644.797mil|Location2.Y=4656.047mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3607.897mil|Location2.X=3619.147mil|Location1.Y=4644.797mil|Location2.Y=4656.047mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.219mm &lt; 0.254mm) Between Pad IC5-MH2(91.869mm,119.232mm) on Multi-Layer And Track (91.769mm,117.002mm)(91.769mm,117.962mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.219mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5028.547mil|Location2.X=5039.797mil|Location1.Y=1323.627mil|Location2.Y=1334.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5028.547mil|Location2.X=5039.797mil|Location1.Y=1323.627mil|Location2.Y=1334.877mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad IC6-1(127.268mm,34.388mm) on Top Layer And Track (128.093mm,33.763mm)(128.093mm,35.013mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 02:28:44<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5365.517mil|Location2.X=5376.767mil|Location1.Y=2123.843mil|Location2.Y=2135.093mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5365.517mil|Location2.X=5376.767mil|Location1.Y=2123.843mil|Location2.Y=2135.093mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.127mm &lt; 0.254mm) Between Pad Q1-2(139.827mm,57.277mm) on Top Layer And Track (135.531mm,53.975mm)(141.627mm,53.975mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.127mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5365.517mil|Location2.X=5376.767mil|Location1.Y=2374.907mil|Location2.Y=2386.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5365.517mil|Location2.X=5376.767mil|Location1.Y=2374.907mil|Location2.Y=2386.157mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.127mm &lt; 0.254mm) Between Pad Q1-2(139.827mm,57.277mm) on Top Layer And Track (135.627mm,60.579mm)(141.627mm,60.579mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.127mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBTWQMQQ1ACTZH0TYVB40ZWK1JBRPQN23TCT4E0HAZOMTCZU3ACZH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2424.375mil|Location2.X=2435.625mil|Location1.Y=1092.737mil|Location2.Y=1103.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2424.375mil|Location2.X=2435.625mil|Location1.Y=1092.737mil|Location2.Y=1103.987mil|Absolute=True">Silk To Silk Clearance Constraint: (0.137mm &lt; 0.254mm) Between Text "1" (61.722mm,27.305mm) on Top Overlay And Track (57.404mm,28.067mm)(62.484mm,28.067mm) on Top Overlay Silk Text to Silk Clearance [0.137mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2324.375mil|Location2.X=2335.625mil|Location1.Y=1091.068mil|Location2.Y=1102.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2324.375mil|Location2.X=2335.625mil|Location1.Y=1091.068mil|Location2.Y=1102.318mil|Absolute=True">Silk To Silk Clearance Constraint: (0.222mm &lt; 0.254mm) Between Text "2" (59.182mm,26.797mm) on Top Overlay And Track (57.404mm,28.067mm)(62.484mm,28.067mm) on Top Overlay Silk Text to Silk Clearance [0.222mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2374.391mil|Location2.X=2385.641mil|Location1.Y=1404.343mil|Location2.Y=1415.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2374.391mil|Location2.X=2385.641mil|Location1.Y=1404.343mil|Location2.Y=1415.593mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "5" (61.722mm,35.941mm) on Top Overlay And Track (57.404mm,35.687mm)(62.484mm,35.687mm) on Top Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2299.383mil|Location2.X=2310.633mil|Location1.Y=1404.343mil|Location2.Y=1415.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2299.383mil|Location2.X=2310.633mil|Location1.Y=1404.343mil|Location2.Y=1415.593mil|Absolute=True">Silk To Silk Clearance Constraint: (0.052mm &lt; 0.254mm) Between Text "6" (59.182mm,35.941mm) on Top Overlay And Track (57.404mm,35.687mm)(62.484mm,35.687mm) on Top Overlay Silk Text to Silk Clearance [0.052mm]</acronym></a><br>Waived by Karolis Juozapaitis at 07/12/2022 01:55:33<br>Some componeds have small spacing (Pad + Silkscreen)</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

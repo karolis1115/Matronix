@@ -1,0 +1,78 @@
+Removed Pin From Net: NetName=NetLabel3 Pin=P?-A12
+Removed Pin From Net: NetName=NetLabel4 Pin=P?-A13
+Removed Pin From Net: NetName=NetLabel6 Pin=P?-A15
+Removed Pin From Net: NetName=NetLabel7 Pin=P?-A16
+Removed Pin From Net: NetName=NetLabel8 Pin=P?-A17
+Removed Pin From Net: NetName=NetLabel9 Pin=P?-A18
+Removed Pin From Net: NetName=NetLabel11 Pin=P?-A20
+Removed Pin From Net: NetName=NetLabel12 Pin=P?-A21
+Removed Pin From Net: NetName=NetLabel13 Pin=P?-A22
+Removed Pin From Net: NetName=NetLabel14 Pin=P?-A23
+Removed Pin From Net: NetName=NetLabel15 Pin=P?-A24
+Removed Pin From Net: NetName=NetLabel16 Pin=P?-A25
+Removed Pin From Net: NetName=NetLabel17 Pin=P?-A26
+Removed Pin From Net: NetName=NetLabel18 Pin=P?-A27
+Removed Pin From Net: NetName=NetLabel19 Pin=P?-A28
+Removed Pin From Net: NetName=NetLabel20 Pin=P?-A29
+Removed Pin From Net: NetName=NetLabel21 Pin=P?-A30
+Removed Pin From Net: NetName=NetLabel22 Pin=P?-A31
+Removed Pin From Net: NetName=NetLabel23 Pin=P?-A32
+Removed Pin From Net: NetName=NetLabel24 Pin=P?-A33
+Removed Pin From Net: NetName=NetLabel25 Pin=P?-A34
+Removed Pin From Net: NetName=NetLabel26 Pin=P?-A35
+Removed Pin From Net: NetName=NetLabel27 Pin=P?-A36
+Removed Pin From Net: NetName=NetLabel28 Pin=P?-A37
+Removed Pin From Net: NetName=NetLabel29 Pin=P?-A38
+Removed Pin From Net: NetName=NetLabel30 Pin=P?-A39
+Removed Pin From Net: NetName=NetLabel31 Pin=P?-A40
+Removed Pin From Net: NetName=NetLabel32 Pin=P?-A41
+Removed Pin From Net: NetName=NetLabel33 Pin=P?-A42
+Removed Pin From Net: NetName=NetLabel34 Pin=P?-A43
+Removed Pin From Net: NetName=NetLabel35 Pin=P?-A44
+Removed Pin From Net: NetName=NetLabel36 Pin=P?-A45
+Removed Pin From Net: NetName=NetLabel37 Pin=P?-A46
+Removed Pin From Net: NetName=NetLabel38 Pin=P?-A47
+Removed Pin From Net: NetName=NetLabel39 Pin=P?-A48
+Removed Pin From Net: NetName=NetLabel40 Pin=P?-A49
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=P? NewDesignator=P2
+Change Net Name : Old Net Name=NetP?_A12 New Net Name=NetP1_B12
+Change Net Name : Old Net Name=NetP?_A13 New Net Name=NetP1_B13
+Change Net Name : Old Net Name=NetP?_A14 New Net Name=NetP1_B14
+Change Net Name : Old Net Name=NetP?_A15 New Net Name=NetP1_B15
+Change Net Name : Old Net Name=NetP?_A16 New Net Name=NetP1_B16
+Change Net Name : Old Net Name=NetP?_A17 New Net Name=NetP1_B17
+Change Net Name : Old Net Name=NetP?_A18 New Net Name=NetP1_B18
+Change Net Name : Old Net Name=NetP?_A19 New Net Name=NetP1_B19
+Change Net Name : Old Net Name=NetP?_A20 New Net Name=NetP1_B20
+Change Net Name : Old Net Name=NetP?_A21 New Net Name=NetP1_B21
+Change Net Name : Old Net Name=NetP?_A22 New Net Name=NetP1_B22
+Change Net Name : Old Net Name=NetP?_A23 New Net Name=NetP1_B23
+Change Net Name : Old Net Name=NetP?_A24 New Net Name=NetP1_B24
+Change Net Name : Old Net Name=NetP?_A25 New Net Name=NetP1_B25
+Change Net Name : Old Net Name=NetP?_A26 New Net Name=NetP1_B26
+Change Net Name : Old Net Name=NetP?_A27 New Net Name=NetP1_B27
+Change Net Name : Old Net Name=NetP?_A28 New Net Name=NetP1_B28
+Change Net Name : Old Net Name=NetP?_A29 New Net Name=NetP1_B29
+Change Net Name : Old Net Name=NetP?_A30 New Net Name=NetP1_B30
+Change Net Name : Old Net Name=NetP?_A31 New Net Name=NetP1_B31
+Change Net Name : Old Net Name=NetP?_A32 New Net Name=NetP1_B32
+Change Net Name : Old Net Name=NetP?_A33 New Net Name=NetP1_B33
+Change Net Name : Old Net Name=NetP?_A34 New Net Name=NetP1_B34
+Change Net Name : Old Net Name=NetP?_A35 New Net Name=NetP1_B35
+Change Net Name : Old Net Name=NetP?_A36 New Net Name=NetP1_B36
+Change Net Name : Old Net Name=NetP?_A37 New Net Name=NetP1_B37
+Change Net Name : Old Net Name=NetP?_A38 New Net Name=NetP1_B38
+Change Net Name : Old Net Name=NetP?_A39 New Net Name=NetP1_B39
+Change Net Name : Old Net Name=NetP?_A40 New Net Name=NetP1_B40
+Change Net Name : Old Net Name=NetP?_A41 New Net Name=NetP1_B41
+Change Net Name : Old Net Name=NetP?_A42 New Net Name=NetP1_B42
+Change Net Name : Old Net Name=NetP?_A43 New Net Name=NetP1_B43
+Change Net Name : Old Net Name=NetP?_A44 New Net Name=NetP1_B44
+Change Net Name : Old Net Name=NetP?_A45 New Net Name=NetP1_B45
+Change Net Name : Old Net Name=NetP?_A46 New Net Name=NetP1_B46
+Change Net Name : Old Net Name=NetP?_A47 New Net Name=NetP1_B47
+Change Net Name : Old Net Name=NetP?_A48 New Net Name=NetP1_B48
+Change Net Name : Old Net Name=NetP?_A49 New Net Name=NetP1_B49
+Added Member To Class: ClassName=PCIe_connection_board Member=Component P2 G630H9812248EU
+Added Room: Name=PCIe_connection_board

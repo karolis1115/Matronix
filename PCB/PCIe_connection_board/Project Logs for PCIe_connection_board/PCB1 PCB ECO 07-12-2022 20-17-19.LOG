@@ -1,0 +1,98 @@
+Change component parameters: Designator = "P1" ("P1"); Footprint = "AMPHENOL_G630H9812248EU"; UniqueID = "\RZKEPINP" ("\RZKEPINP")
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "P2" ("P2"); Footprint = "AMPHENOL_G630H9812248EU"; UniqueID = "\VBLVIKJK" ("\VBLVIKJK")
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=+5V New Net Name=GND
+Change Net Name : Old Net Name=GND New Net Name=+5V
+Change Net Name : Old Net Name=NetLabel1 New Net Name=NetP1_B12
+Change Net Name : Old Net Name=NetLabel2 New Net Name=NetP1_B13
+Change Net Name : Old Net Name=NetLabel3 New Net Name=NetP1_B14
+Change Net Name : Old Net Name=NetLabel4 New Net Name=NetP1_B15
+Change Net Name : Old Net Name=NetLabel5 New Net Name=NetP1_B16
+Change Net Name : Old Net Name=NetLabel6 New Net Name=NetP1_B17
+Change Net Name : Old Net Name=NetLabel7 New Net Name=NetP1_B18
+Change Net Name : Old Net Name=NetLabel8 New Net Name=NetP1_B19
+Change Net Name : Old Net Name=NetLabel9 New Net Name=NetP1_B20
+Change Net Name : Old Net Name=NetLabel10 New Net Name=NetP1_B21
+Change Net Name : Old Net Name=NetLabel11 New Net Name=NetP1_B22
+Change Net Name : Old Net Name=NetLabel12 New Net Name=NetP1_B23
+Change Net Name : Old Net Name=NetLabel13 New Net Name=NetP1_B24
+Change Net Name : Old Net Name=NetLabel14 New Net Name=NetP1_B25
+Change Net Name : Old Net Name=NetLabel15 New Net Name=NetP1_B26
+Change Net Name : Old Net Name=NetLabel16 New Net Name=NetP1_B27
+Change Net Name : Old Net Name=NetLabel17 New Net Name=NetP1_B28
+Change Net Name : Old Net Name=NetLabel18 New Net Name=NetP1_B29
+Change Net Name : Old Net Name=NetLabel19 New Net Name=NetP1_B30
+Change Net Name : Old Net Name=NetLabel20 New Net Name=NetP1_B31
+Change Net Name : Old Net Name=NetLabel21 New Net Name=NetP1_B32
+Change Net Name : Old Net Name=NetLabel22 New Net Name=NetP1_B33
+Change Net Name : Old Net Name=NetLabel23 New Net Name=NetP1_B34
+Change Net Name : Old Net Name=NetLabel24 New Net Name=NetP1_B35
+Change Net Name : Old Net Name=NetLabel25 New Net Name=NetP1_B36
+Change Net Name : Old Net Name=NetLabel26 New Net Name=NetP1_B37
+Change Net Name : Old Net Name=NetLabel27 New Net Name=NetP1_B38
+Change Net Name : Old Net Name=NetLabel28 New Net Name=NetP1_B39
+Change Net Name : Old Net Name=NetLabel29 New Net Name=NetP1_B40
+Change Net Name : Old Net Name=NetLabel30 New Net Name=NetP1_B41
+Change Net Name : Old Net Name=NetLabel31 New Net Name=NetP1_B42
+Change Net Name : Old Net Name=NetLabel32 New Net Name=NetP1_B43
+Change Net Name : Old Net Name=NetLabel34 New Net Name=NetP1_B44
+Change Net Name : Old Net Name=NetLabel35 New Net Name=NetP1_B45
+Change Net Name : Old Net Name=NetLabel36 New Net Name=NetP1_B46
+Change Net Name : Old Net Name=NetLabel37 New Net Name=NetP1_B47
+Change Net Name : Old Net Name=NetLabel38 New Net Name=NetP1_B48
+Change Net Name : Old Net Name=NetLabel39 New Net Name=NetP1_B49
+Change Net Name : Old Net Name=NetP1_A12 New Net Name=NetLabel1
+Change Net Name : Old Net Name=NetP1_A13 New Net Name=NetLabel2
+Change Net Name : Old Net Name=NetP1_A14 New Net Name=NetLabel3
+Change Net Name : Old Net Name=NetP1_A15 New Net Name=NetLabel4
+Change Net Name : Old Net Name=NetP1_A16 New Net Name=NetLabel5
+Change Net Name : Old Net Name=NetP1_A17 New Net Name=NetLabel6
+Change Net Name : Old Net Name=NetP1_A18 New Net Name=NetLabel7
+Change Net Name : Old Net Name=NetP1_A19 New Net Name=NetLabel8
+Change Net Name : Old Net Name=NetP1_A20 New Net Name=NetLabel9
+Change Net Name : Old Net Name=NetP1_A21 New Net Name=NetLabel10
+Change Net Name : Old Net Name=NetP1_A22 New Net Name=NetLabel11
+Change Net Name : Old Net Name=NetP1_A23 New Net Name=NetLabel12
+Change Net Name : Old Net Name=NetP1_A24 New Net Name=NetLabel13
+Change Net Name : Old Net Name=NetP1_A25 New Net Name=NetLabel14
+Change Net Name : Old Net Name=NetP1_A26 New Net Name=NetLabel15
+Change Net Name : Old Net Name=NetP1_A27 New Net Name=NetLabel16
+Change Net Name : Old Net Name=NetP1_A28 New Net Name=NetLabel17
+Change Net Name : Old Net Name=NetP1_A29 New Net Name=NetLabel18
+Change Net Name : Old Net Name=NetP1_A30 New Net Name=NetLabel19
+Change Net Name : Old Net Name=NetP1_A31 New Net Name=NetLabel20
+Change Net Name : Old Net Name=NetP1_A32 New Net Name=NetLabel21
+Change Net Name : Old Net Name=NetP1_A33 New Net Name=NetLabel22
+Change Net Name : Old Net Name=NetP1_A34 New Net Name=NetLabel23
+Change Net Name : Old Net Name=NetP1_A35 New Net Name=NetLabel24
+Change Net Name : Old Net Name=NetP1_A36 New Net Name=NetLabel25
+Change Net Name : Old Net Name=NetP1_A37 New Net Name=NetLabel26
+Change Net Name : Old Net Name=NetP1_A38 New Net Name=NetLabel27
+Change Net Name : Old Net Name=NetP1_A39 New Net Name=NetLabel28
+Change Net Name : Old Net Name=NetP1_A40 New Net Name=NetLabel29
+Change Net Name : Old Net Name=NetP1_A41 New Net Name=NetLabel30
+Change Net Name : Old Net Name=NetP1_A42 New Net Name=NetLabel31
+Change Net Name : Old Net Name=NetP1_A43 New Net Name=NetLabel32
+Change Net Name : Old Net Name=NetP1_A44 New Net Name=NetLabel34
+Change Net Name : Old Net Name=NetP1_A45 New Net Name=NetLabel35
+Change Net Name : Old Net Name=NetP1_A46 New Net Name=NetLabel36
+Change Net Name : Old Net Name=NetP1_A47 New Net Name=NetLabel37
+Change Net Name : Old Net Name=NetP1_A48 New Net Name=NetLabel38
+Change Net Name : Old Net Name=NetP1_A49 New Net Name=NetLabel39
+Added Member To Class: ClassName=PCIe_connection_board Member=Component P1 G630H9812248EU
+Added Member To Class: ClassName=PCIe_connection_board Member=Component P2 G630H9812248EU

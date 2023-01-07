@@ -1,0 +1,51 @@
+Added Component: Designator=P4(AMPHENOL_G630H9812248EU)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=P4-A1
+Added Pin To Net: NetName=5V Pin=P4-A2
+Added Pin To Net: NetName=5V Pin=P4-A3
+Added Pin To Net: NetName=5V Pin=P4-A4
+Added Pin To Net: NetName=5V Pin=P4-A5
+Added Pin To Net: NetName=5V Pin=P4-A6
+Added Pin To Net: NetName=5V Pin=P4-A7
+Added Pin To Net: NetName=5V Pin=P4-A8
+Added Pin To Net: NetName=5V Pin=P4-A9
+Added Pin To Net: NetName=5V Pin=P4-A10
+Added Pin To Net: NetName=5V Pin=P4-A11
+Added Pin To Net: NetName=R1 Pin=P4-A20
+Added Pin To Net: NetName=B1 Pin=P4-A21
+Added Pin To Net: NetName=R2 Pin=P4-A22
+Added Pin To Net: NetName=B2 Pin=P4-A23
+Added Pin To Net: NetName=A Pin=P4-A24
+Added Pin To Net: NetName=C Pin=P4-A25
+Added Pin To Net: NetName=CLK Pin=P4-A26
+Added Pin To Net: NetName=OE Pin=P4-A27
+Added Pin To Net: NetName=G1 Pin=P4-A28
+Added Pin To Net: NetName=G2 Pin=P4-A29
+Added Pin To Net: NetName=B Pin=P4-A30
+Added Pin To Net: NetName=D Pin=P4-A31
+Added Pin To Net: NetName=LAT Pin=P4-A32
+Added Pin To Net: NetName=E_BUFF Pin=P4-A40
+Added Pin To Net: NetName=AIN2 Pin=P4-A41
+Added Pin To Net: NetName=AIN3 Pin=P4-A42
+Added Pin To Net: NetName=SDA Pin=P4-A44
+Added Pin To Net: NetName=SCL Pin=P4-A45
+Added Pin To Net: NetName=DISP_SENSE Pin=P4-A48
+Added Pin To Net: NetName=BAT_SENSE Pin=P4-A49
+Added Pin To Net: NetName=GND Pin=P4-B1
+Added Pin To Net: NetName=GND Pin=P4-B2
+Added Pin To Net: NetName=GND Pin=P4-B3
+Added Pin To Net: NetName=GND Pin=P4-B4
+Added Pin To Net: NetName=GND Pin=P4-B5
+Added Pin To Net: NetName=GND Pin=P4-B6
+Added Pin To Net: NetName=GND Pin=P4-B7
+Added Pin To Net: NetName=GND Pin=P4-B8
+Added Pin To Net: NetName=GND Pin=P4-B9
+Added Pin To Net: NetName=GND Pin=P4-B10
+Added Pin To Net: NetName=GND Pin=P4-B11
+Added Member To Class: ClassName=Sheet1 Member=Component P4 G630H9812248EU

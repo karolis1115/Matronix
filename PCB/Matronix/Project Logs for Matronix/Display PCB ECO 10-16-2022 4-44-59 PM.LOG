@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=P1 NewDesignator=P3
+Change Component Designator: OldDesignator=P2 NewDesignator=P1
+Change Component Designator: OldDesignator=P3 NewDesignator=P2
+Added Member To Class: ClassName=Display Member=Component P3 G630H9812248EU
+Added Member To Class: ClassName=Display Member=Component P4 G630H9812248EU
+Added Member To Class: ClassName=Display Member=Component P5 RASPI
+Added Member To Class: ClassName=Display Member=Component U3 MCP23017-E/SO
+Added Member To Class: ClassName=Display Member=Component U5 SN74HCT245DWR
+Added Room: Name=Display

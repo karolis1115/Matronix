@@ -1,0 +1,39 @@
+Removed Member From Class: ClassName=ADC Member=R6
+Added Component: Designator=J?(17477851)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1747785-1/te-connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1747785%7FD%7Fpdf%7FEnglish%7FENG_CD_1747785_D.pdf%7F1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "5.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "571-1747785-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/1747785-1?qs=wds1f20rnm3JQGfMkfdK9A%3D%3D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J?-MH1
+Added Pin To Net: NetName=GND Pin=J?-MH2
+Added Pin To Net: NetName=NetLabel2 Pin=J?-1
+Added Net: Name=NetLabel2
+Added Pin To Net: NetName=NetLabel3 Pin=J?-2
+Added Net: Name=NetLabel3
+Added Pin To Net: NetName=NetLabel4 Pin=J?-3
+Added Net: Name=NetLabel4
+Added Pin To Net: NetName=NetLabel5 Pin=J?-4
+Added Net: Name=NetLabel5
+Added Pin To Net: NetName=NetLabel6 Pin=J?-5
+Added Net: Name=NetLabel6
+Added Pin To Net: NetName=NetLabel7 Pin=J?-7
+Added Net: Name=NetLabel7
+Added Pin To Net: NetName=NetLabel8 Pin=J?-6
+Added Net: Name=NetLabel8
+Added Pin To Net: NetName=NetLabel9 Pin=J?-8
+Added Net: Name=NetLabel9
+Added Member To Class: ClassName=Connectors Member=Component J? 1747785-1
+Added Member To Class: ClassName=Connectors Member=Component P2 G630H9812248EU
+Added Member To Class: ClassName=Connectors Member=Component P6 OUTPUT_B
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R5 RC1206JR-070RL
+Added Member To Class: ClassName=ADC Member=Component R9 RC1206JR-070RL
+Added Room: Name=3v3--5V Logic Level Conversion
+Added Room: Name=ADC
+Added Room: Name=Connectors
+Added Room: Name=Display&Baterry detection

@@ -1,0 +1,18 @@
+Change Component Designator: OldDesignator=P2 NewDesignator=P1
+Change Component Designator: OldDesignator=P3 NewDesignator=P2
+Change Component Designator: OldDesignator=P4 NewDesignator=P3
+Change Component Designator: OldDesignator=P? NewDesignator=P4
+Change Component Designator: OldDesignator=P? NewDesignator=P5
+Change Component Designator: OldDesignator=P? NewDesignator=P6
+Change Component Designator: OldDesignator=R5 NewDesignator=R4
+Change Component Designator: OldDesignator=R6 NewDesignator=R5
+Change Component Designator: OldDesignator=R9 NewDesignator=R6
+Change Component Designator: OldDesignator=R10 NewDesignator=R7
+Change Component Designator: OldDesignator=R13 NewDesignator=R8
+Change Component Designator: OldDesignator=R14 NewDesignator=R9
+Added Member To Class: ClassName=Connectors Member=Component P4 RASPI
+Added Member To Class: ClassName=Connectors Member=Component P5 INPUT_B
+Added Room: Name=3v3--5V Logic Level Conversion
+Added Room: Name=ADC
+Added Room: Name=Connectors
+Added Room: Name=Display&Baterry detection

@@ -1,0 +1,18 @@
+Change component parameters: Designator = "P?" ("P?"); Footprint = "AMPHENOL_G630H9812248EU"; UniqueID = "\ZEAXIDTW" ("\ZEAXIDTW")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P?(AMPHENOL_G630H9812248EU)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=PCIe_connection_board Member=Component P? G630H9812248EU

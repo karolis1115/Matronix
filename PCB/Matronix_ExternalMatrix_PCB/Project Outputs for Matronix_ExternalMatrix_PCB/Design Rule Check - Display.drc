@@ -1,0 +1,95 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_ExternalMatrix_PCB\Display.PcbDoc
+Date     : 07/12/2022
+Time     : 18:38:39
+
+Processing Rule : Clearance Constraint (Gap=0.203mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=5mm) (Preferred=4.7mm) (InNet('5V'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=1mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.203mm) (Air Gap=0.203mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.076mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.127mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Waived Violations Of Rule : Board Clearance Constraint (Gap=0mm) (All)
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (145.275mm,137.422mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (145.275mm,20.075mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (145.325mm,137.522mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (145.325mm,19.975mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (19.975mm,92.178mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (20.075mm,92.228mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (297.425mm,92.222mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Arc (297.525mm,92.172mm) on Top Overlay And Board Edge Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (125.85mm,135.697mm)(125.85mm,142.497mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (125.85mm,142.497mm)(144.3mm,142.497mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (125.85mm,15mm)(125.85mm,21.8mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (125.85mm,15mm)(144.3mm,15mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (144.3mm,137.497mm)(144.3mm,142.497mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (144.3mm,15mm)(144.3mm,20mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (146.2mm,137.497mm)(146.2mm,142.497mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (146.2mm,142.497mm)(191.65mm,142.497mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (146.2mm,15mm)(146.2mm,20mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (146.2mm,15mm)(191.65mm,15mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (15mm,111.653mm)(21.8mm,111.653mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (15mm,45.853mm)(15mm,91.303mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (15mm,45.853mm)(21.8mm,45.853mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (15mm,91.303mm)(20mm,91.303mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (15mm,93.203mm)(15mm,111.653mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (15mm,93.203mm)(20mm,93.203mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (191.65mm,135.697mm)(191.65mm,142.497mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (191.65mm,15mm)(191.65mm,21.8mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 11:06:29overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (295.7mm,111.647mm)(302.5mm,111.647mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (295.7mm,45.847mm)(302.5mm,45.847mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (297.5mm,91.297mm)(302.5mm,91.297mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (297.5mm,93.197mm)(302.5mm,93.197mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (302.5mm,45.847mm)(302.5mm,91.297mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.1mm) Between Board Edge And Track (302.5mm,93.197mm)(302.5mm,111.647mm) on Top Overlay Waived by Karolis Juozapaitis at 06/12/2022 21:19:52overlay was used as positioning for some componentsSome component overlay positioning is incorrect
+Waived Violations :32
+
+
+Violations Detected : 0
+Waived Violations : 32
+Time Elapsed        : 00:00:02

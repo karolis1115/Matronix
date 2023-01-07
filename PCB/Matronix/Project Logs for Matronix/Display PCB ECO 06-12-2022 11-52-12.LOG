@@ -1,0 +1,51 @@
+Removed Pin From Net: NetName=5V Pin=P1-A1
+Removed Pin From Net: NetName=5V Pin=P1-A2
+Removed Pin From Net: NetName=5V Pin=P1-A3
+Removed Pin From Net: NetName=5V Pin=P1-A4
+Removed Pin From Net: NetName=5V Pin=P1-A5
+Removed Pin From Net: NetName=5V Pin=P1-A6
+Removed Pin From Net: NetName=5V Pin=P1-A7
+Removed Pin From Net: NetName=5V Pin=P1-A8
+Removed Pin From Net: NetName=5V Pin=P1-A9
+Removed Pin From Net: NetName=5V Pin=P1-A10
+Removed Pin From Net: NetName=5V Pin=P1-A11
+Removed Pin From Net: NetName=GND Pin=P1-B1
+Removed Pin From Net: NetName=GND Pin=P1-B2
+Removed Pin From Net: NetName=GND Pin=P1-B3
+Removed Pin From Net: NetName=GND Pin=P1-B4
+Removed Pin From Net: NetName=GND Pin=P1-B5
+Removed Pin From Net: NetName=GND Pin=P1-B6
+Removed Pin From Net: NetName=GND Pin=P1-B7
+Removed Pin From Net: NetName=GND Pin=P1-B8
+Removed Pin From Net: NetName=GND Pin=P1-B9
+Removed Pin From Net: NetName=GND Pin=P1-B10
+Removed Pin From Net: NetName=GND Pin=P1-B11
+Added Pin To Net: NetName=GND Pin=P1-A1
+Added Pin To Net: NetName=GND Pin=P1-A2
+Added Pin To Net: NetName=GND Pin=P1-A3
+Added Pin To Net: NetName=GND Pin=P1-A4
+Added Pin To Net: NetName=GND Pin=P1-A5
+Added Pin To Net: NetName=GND Pin=P1-A6
+Added Pin To Net: NetName=GND Pin=P1-A7
+Added Pin To Net: NetName=GND Pin=P1-A8
+Added Pin To Net: NetName=GND Pin=P1-A9
+Added Pin To Net: NetName=GND Pin=P1-A10
+Added Pin To Net: NetName=GND Pin=P1-A11
+Added Pin To Net: NetName=5V Pin=P1-B1
+Added Pin To Net: NetName=5V Pin=P1-B2
+Added Pin To Net: NetName=5V Pin=P1-B3
+Added Pin To Net: NetName=5V Pin=P1-B4
+Added Pin To Net: NetName=5V Pin=P1-B5
+Added Pin To Net: NetName=5V Pin=P1-B6
+Added Pin To Net: NetName=5V Pin=P1-B7
+Added Pin To Net: NetName=5V Pin=P1-B8
+Added Pin To Net: NetName=5V Pin=P1-B9
+Added Pin To Net: NetName=5V Pin=P1-B10
+Added Pin To Net: NetName=5V Pin=P1-B11
+Added Member To Class: ClassName=Connectors Member=Component P1 G630H9812248EU
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R2 RC1206JR-070RL
+Added Member To Class: ClassName=ADC Member=Component U5 ADS1115IDGSR
+Added Room: Name=3v3--5V Logic Level Conversion
+Added Room: Name=ADC
+Added Room: Name=Connectors
+Added Room: Name=Display&Baterry detection

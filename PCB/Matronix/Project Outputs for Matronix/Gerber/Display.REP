@@ -1,0 +1,312 @@
+*************************************************************
+FileName = Display.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : Display.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : Display.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D21
+    D22
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+*************************************************************
+
+*************************************************************
+Generating : Bottom 3D Body
+      File : Display.GM23
+
+    Adding Layer      : Bottom 3D Body
+
+
+Used DCodes :
+    D46
+*************************************************************
+
+*************************************************************
+Generating : Bottom Courtyard
+      File : Display.GM21
+
+    Adding Layer      : Bottom Courtyard
+
+
+Used DCodes :
+    D46
+*************************************************************
+
+*************************************************************
+Generating : Top Component Center
+      File : Display.GM16
+
+    Adding Layer      : Top Component Center
+
+
+Used DCodes :
+    D46
+*************************************************************
+
+*************************************************************
+Generating : Top Assembly
+      File : Display.GM5
+
+    Adding Layer      : Top Assembly
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : Display.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D47
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : Display.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D11
+    D14
+    D15
+    D46
+    D47
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Display.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D21
+    D22
+    D44
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : Display.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D45
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : Display.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : Display.GPT
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : Display.GPB
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D21
+    D22
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D44
+*************************************************************
+
+*************************************************************
+Generating : Top 3D Body
+      File : Display.GM13
+
+    Adding Layer      : Top 3D Body
+
+
+Used DCodes :
+    D11
+    D12
+    D46
+*************************************************************
+
+*************************************************************
+Generating : Top Courtyard
+      File : Display.GM15
+
+    Adding Layer      : Top Courtyard
+
+
+Used DCodes :
+    D11
+    D46
+    D48
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : Display.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+    D19
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : Display.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+*************************************************************
+

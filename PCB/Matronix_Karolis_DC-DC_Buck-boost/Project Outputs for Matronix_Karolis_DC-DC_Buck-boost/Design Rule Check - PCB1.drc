@@ -1,0 +1,130 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\CAD\Matronix_Karolis_DC-DC_Buck-boost\PCB1.PcbDoc
+Date     : 07/12/2022
+Time     : 21:08:03
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Waived Violations Of Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+   Waived Violation between Hole Size Constraint: (4.4mm > 2.54mm) Pad ENC1-3(35.829mm,46.736mm) on Multi-Layer Actual Slot Hole Height = 4.4mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Hole Size Constraint: (4.4mm > 2.54mm) Pad ENC1-4(47.229mm,46.736mm) on Multi-Layer Actual Slot Hole Height = 4.4mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Hole Size Constraint: (4.4mm > 2.54mm) Pad ENC2-3(157.368mm,47.244mm) on Multi-Layer Actual Slot Hole Height = 4.4mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Hole Size Constraint: (4.4mm > 2.54mm) Pad ENC2-4(168.768mm,47.244mm) on Multi-Layer Actual Slot Hole Height = 4.4mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Hole Size Constraint: (5mm > 2.54mm) Pad Free-3(140.97mm,119.253mm) on Multi-Layer Actual Hole Size = 5mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Hole Size Constraint: (5mm > 2.54mm) Pad Free-3(164.719mm,118.872mm) on Multi-Layer Actual Hole Size = 5mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Hole Size Constraint: (5mm > 2.54mm) Pad Free-3(37.338mm,120.015mm) on Multi-Layer Actual Hole Size = 5mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Hole Size Constraint: (5mm > 2.54mm) Pad Free-3(64.77mm,120.142mm) on Multi-Layer Actual Hole Size = 5mmWaived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+Waived Violations :8
+
+Waived Violations Of Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.247mm < 0.254mm) Between Pad D1-1(148.686mm,101.645mm) on Top Layer And Pad D1-2(150.526mm,101.645mm) on Top Layer [Top Solder] Mask Sliver [0.247mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC4-1(108.801mm,113.445mm) on Top Layer And Pad IC4-14(109.601mm,112.895mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC4-10(108.801mm,110.845mm) on Top Layer And Pad IC4-11(109.601mm,111.395mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC4-3(107.801mm,113.445mm) on Top Layer And Pad IC4-4(107.001mm,112.895mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.21mm < 0.254mm) Between Pad IC4-6(107.001mm,111.895mm) on Top Layer And Via (105.842mm,112.776mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.21mm]Waived by Karolis Juozapaitis at 07/12/2022 18:06:44Connector Footprint Violates DRC Ignore Violation
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC4-7(107.001mm,111.395mm) on Top Layer And Pad IC4-8(107.801mm,110.845mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A1(98.889mm,116.832mm) on Top Layer And Pad IC5-B12(98.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.173mm < 0.254mm) Between Pad IC5-A10(94.389mm,116.832mm) on Top Layer And Pad IC5-B4(94.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A10(94.389mm,116.832mm) on Top Layer And Pad IC5-G2(94.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.173mm < 0.254mm) Between Pad IC5-A11(93.889mm,116.832mm) on Top Layer And Pad IC5-B1(93.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A11(93.889mm,116.832mm) on Top Layer And Pad IC5-G2(94.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A12(93.389mm,116.832mm) on Top Layer And Pad IC5-B1(93.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.173mm < 0.254mm) Between Pad IC5-A2(98.389mm,116.832mm) on Top Layer And Pad IC5-B12(98.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A2(98.389mm,116.832mm) on Top Layer And Pad IC5-G1(98.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.173mm < 0.254mm) Between Pad IC5-A3(97.889mm,116.832mm) on Top Layer And Pad IC5-B9(97.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.173mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A3(97.889mm,116.832mm) on Top Layer And Pad IC5-G1(98.139mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A4(97.389mm,116.832mm) on Top Layer And Pad IC5-B9(97.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.106mm < 0.254mm) Between Pad IC5-A5(96.889mm,116.832mm) on Top Layer And Pad IC5-B7(96.539mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.106mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.132mm < 0.254mm) Between Pad IC5-A5(96.889mm,116.832mm) on Top Layer And Pad IC5-B9(97.339mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.132mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.226mm < 0.254mm) Between Pad IC5-A6(96.389mm,116.832mm) on Top Layer And Pad IC5-B6(95.739mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.226mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A6(96.389mm,116.832mm) on Top Layer And Pad IC5-B7(96.539mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A7(95.889mm,116.832mm) on Top Layer And Pad IC5-B6(95.739mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.226mm < 0.254mm) Between Pad IC5-A7(95.889mm,116.832mm) on Top Layer And Pad IC5-B7(96.539mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.226mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.132mm < 0.254mm) Between Pad IC5-A8(95.389mm,116.832mm) on Top Layer And Pad IC5-B4(94.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.132mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.106mm < 0.254mm) Between Pad IC5-A8(95.389mm,116.832mm) on Top Layer And Pad IC5-B6(95.739mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.106mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad IC5-A9(94.889mm,116.832mm) on Top Layer And Pad IC5-B4(94.939mm,118.082mm) on Multi-Layer [Top Solder] Mask Sliver [0.097mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+Waived Violations :26
+
+Waived Violations Of Rule : Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-1(41.275mm,83.394mm) on Top Layer And Track (40.6mm,82.631mm)(40.6mm,84.156mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-1(41.275mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-2(42.545mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-3(43.815mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-4(45.085mm,83.394mm) on Top Layer And Track (40.73mm,84.506mm)(45.63mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-5(45.085mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-6(43.815mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-7(42.545mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC1-8(41.275mm,88.818mm) on Top Layer And Track (40.73mm,87.706mm)(45.63mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 18:06:44Connector Footprint Violates DRC Ignore Violation
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC2-1(125.902mm,71.755mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC2-1(125.902mm,71.755mm) on Top Layer And Track (125.14mm,71.08mm)(126.665mm,71.08mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC2-2(125.902mm,73.025mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC2-3(125.902mm,74.295mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC2-4(125.902mm,75.565mm) on Top Layer And Track (124.79mm,71.21mm)(124.79mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC2-5(120.478mm,75.565mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC2-6(120.478mm,74.295mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC2-7(120.478mm,73.025mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC2-8(120.478mm,71.755mm) on Top Layer And Track (121.59mm,71.21mm)(121.59mm,76.11mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC3-1(54.229mm,83.394mm) on Top Layer And Track (53.554mm,82.631mm)(53.554mm,84.156mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC3-1(54.229mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC3-2(55.499mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC3-3(56.769mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.249mm < 0.254mm) Between Pad IC3-4(58.039mm,83.394mm) on Top Layer And Track (53.684mm,84.506mm)(58.584mm,84.506mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC3-5(58.039mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC3-6(56.769mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC3-7(55.499mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 18:06:44Connector Footprint Violates DRC Ignore Violation
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC3-8(54.229mm,88.818mm) on Top Layer And Track (53.684mm,87.706mm)(58.584mm,87.706mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.219mm < 0.254mm) Between Pad IC5-MH1(100.409mm,119.232mm) on Multi-Layer And Track (100.509mm,117.002mm)(100.509mm,117.962mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.219mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.219mm < 0.254mm) Between Pad IC5-MH2(91.869mm,119.232mm) on Multi-Layer And Track (91.769mm,117.002mm)(91.769mm,117.962mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.219mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.25mm < 0.254mm) Between Pad IC6-1(127.268mm,34.388mm) on Top Layer And Track (128.093mm,33.763mm)(128.093mm,35.013mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.25mm]Waived by Karolis Juozapaitis at 07/12/2022 02:28:44Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.127mm < 0.254mm) Between Pad Q1-2(139.827mm,57.277mm) on Top Layer And Track (135.531mm,53.975mm)(141.627mm,53.975mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.127mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (0.127mm < 0.254mm) Between Pad Q1-2(139.827mm,57.277mm) on Top Layer And Track (135.627mm,60.579mm)(141.627mm,60.579mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.127mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+Waived Violations :32
+
+Waived Violations Of Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
+   Waived Violation between Silk To Silk Clearance Constraint: (0.137mm < 0.254mm) Between Text "1" (61.722mm,27.305mm) on Top Overlay And Track (57.404mm,28.067mm)(62.484mm,28.067mm) on Top Overlay Silk Text to Silk Clearance [0.137mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Silk Clearance Constraint: (0.222mm < 0.254mm) Between Text "2" (59.182mm,26.797mm) on Top Overlay And Track (57.404mm,28.067mm)(62.484mm,28.067mm) on Top Overlay Silk Text to Silk Clearance [0.222mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "5" (61.722mm,35.941mm) on Top Overlay And Track (57.404mm,35.687mm)(62.484mm,35.687mm) on Top Overlay Silk Text to Silk Clearance [0.052mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+   Waived Violation between Silk To Silk Clearance Constraint: (0.052mm < 0.254mm) Between Text "6" (59.182mm,35.941mm) on Top Overlay And Track (57.404mm,35.687mm)(62.484mm,35.687mm) on Top Overlay Silk Text to Silk Clearance [0.052mm]Waived by Karolis Juozapaitis at 07/12/2022 01:55:33Some componeds have small spacing (Pad + Silkscreen)
+Waived Violations :4
+
+
+Violations Detected : 0
+Waived Violations : 70
+Time Elapsed        : 00:00:02

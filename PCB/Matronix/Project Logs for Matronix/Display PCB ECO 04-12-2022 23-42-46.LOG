@@ -1,0 +1,59 @@
+Removed Pin From Net: NetName=R1_C_BUFF Pin=P3-B20
+Removed Pin From Net: NetName=B1_C_BUFF Pin=P3-B21
+Removed Pin From Net: NetName=R2_C_BUFF Pin=P3-B22
+Removed Pin From Net: NetName=B2_C_BUFF Pin=P3-B23
+Removed Pin From Net: NetName=A_BUFF Pin=P3-B24
+Removed Pin From Net: NetName=C_BUFF Pin=P3-B25
+Removed Pin From Net: NetName=CLK_C_BUFF Pin=P3-B26
+Removed Pin From Net: NetName=OE_C_BUFF Pin=P3-B27
+Removed Pin From Net: NetName=G1_C_BUFF Pin=P3-B28
+Removed Pin From Net: NetName=G2_C_BUFF Pin=P3-B29
+Removed Pin From Net: NetName=B_BUFF Pin=P3-B30
+Removed Pin From Net: NetName=D_BUFF Pin=P3-B31
+Removed Pin From Net: NetName=LAT_C_BUFF Pin=P3-B32
+Removed Pin From Net: NetName=E_BUFF Pin=P3-B40
+Removed Pin From Net: NetName=AIN2 Pin=P3-B41
+Removed Pin From Net: NetName=AIN3 Pin=P3-B42
+Removed Pin From Net: NetName=DISP_SENSE_C Pin=P3-B48
+Removed Pin From Net: NetName=BAT_SENSE_C Pin=P3-B49
+Added Pin To Net: NetName=R1_C_BUFF Pin=P3-A20
+Added Pin To Net: NetName=B1_C_BUFF Pin=P3-A21
+Added Pin To Net: NetName=R2_C_BUFF Pin=P3-A22
+Added Pin To Net: NetName=B2_C_BUFF Pin=P3-A23
+Added Pin To Net: NetName=A_BUFF Pin=P3-A24
+Added Pin To Net: NetName=C_BUFF Pin=P3-A25
+Added Pin To Net: NetName=CLK_C_BUFF Pin=P3-A26
+Added Pin To Net: NetName=OE_C_BUFF Pin=P3-A27
+Added Pin To Net: NetName=G1_C_BUFF Pin=P3-A28
+Added Pin To Net: NetName=G2_C_BUFF Pin=P3-A29
+Added Pin To Net: NetName=B_BUFF Pin=P3-A30
+Added Pin To Net: NetName=D_BUFF Pin=P3-A31
+Added Pin To Net: NetName=LAT_C_BUFF Pin=P3-A32
+Added Pin To Net: NetName=E_BUFF Pin=P3-A40
+Added Pin To Net: NetName=AIN2 Pin=P3-A41
+Added Pin To Net: NetName=AIN3 Pin=P3-A42
+Added Pin To Net: NetName=DISP_SENSE_C Pin=P3-A48
+Added Pin To Net: NetName=BAT_SENSE_C Pin=P3-A49
+Added Member To Class: ClassName=ADC Member=Component C1 1206GC102KAT1A
+Added Member To Class: ClassName=ADC Member=Component C2 1206GC102KAT1A
+Added Member To Class: ClassName=Connectors Member=Component J1 1747785-1
+Added Member To Class: ClassName=Connectors Member=Component P4 RASPI
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R1 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R2 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R3 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R4 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R5 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R6 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R7 RC1206JR-070RL
+Added Member To Class: ClassName=ADC Member=Component R8 RC1206JR-070RL
+Added Member To Class: ClassName=ADC Member=Component R9 RC1206JR-070RL
+Added Member To Class: ClassName=3v3--5V Logic Level Conversion Member=Component U1 SN74HCT245DWR
+Added Member To Class: ClassName=3v3--5V Logic Level Conversion Member=Component U2 SN74HCT245DWR
+Added Member To Class: ClassName=3v3--5V Logic Level Conversion Member=Component U3 SN74HCT245DWR
+Added Member To Class: ClassName=3v3--5V Logic Level Conversion Member=Component U4 SN74HCT245DWR
+Added Member To Class: ClassName=ADC Member=Component U5 ADS1115IDGSR
+Added Member To Class: ClassName=ADC Member=Component U6 ADS1115IDGSR
+Added Room: Name=3v3--5V Logic Level Conversion
+Added Room: Name=ADC
+Added Room: Name=Connectors
+Added Room: Name=Display&Baterry detection

@@ -1,0 +1,179 @@
+Removed Pin From Net: NetName=3V3 Pin=P5-1
+Removed Pin From Net: NetName=5V Pin=P5-2
+Removed Pin From Net: NetName=G1_C Pin=P5-3
+Removed Pin From Net: NetName=5V Pin=P5-4
+Removed Pin From Net: NetName=B1_C Pin=P5-5
+Removed Pin From Net: NetName=GND Pin=P5-6
+Removed Pin From Net: NetName=LAT Pin=P5-7
+Removed Pin From Net: NetName=R1_C Pin=P5-8
+Removed Pin From Net: NetName=GND Pin=P5-9
+Removed Pin From Net: NetName=E Pin=P5-10
+Removed Pin From Net: NetName=CLK Pin=P5-11
+Removed Pin From Net: NetName=OE Pin=P5-12
+Removed Pin From Net: NetName=G1_A Pin=P5-13
+Removed Pin From Net: NetName=GND Pin=P5-14
+Removed Pin From Net: NetName=A Pin=P5-15
+Removed Pin From Net: NetName=B Pin=P5-16
+Removed Pin From Net: NetName=3V3 Pin=P5-17
+Removed Pin From Net: NetName=C Pin=P5-18
+Removed Pin From Net: NetName=B2_A Pin=P5-19
+Removed Pin From Net: NetName=GND Pin=P5-20
+Removed Pin From Net: NetName=G2_A Pin=P5-21
+Removed Pin From Net: NetName=D Pin=P5-22
+Removed Pin From Net: NetName=R1_A Pin=P5-23
+Removed Pin From Net: NetName=R2_A Pin=P5-24
+Removed Pin From Net: NetName=GND Pin=P5-25
+Removed Pin From Net: NetName=B1_A Pin=P5-26
+Removed Pin From Net: NetName=SDA Pin=P5-27
+Removed Pin From Net: NetName=SCL Pin=P5-28
+Removed Pin From Net: NetName=G1_B Pin=P5-29
+Removed Pin From Net: NetName=GND Pin=P5-30
+Removed Pin From Net: NetName=B1_B Pin=P5-31
+Removed Pin From Net: NetName=R1_B Pin=P5-32
+Removed Pin From Net: NetName=G2_B Pin=P5-33
+Removed Pin From Net: NetName=GND Pin=P5-34
+Removed Pin From Net: NetName=R2_B Pin=P5-35
+Removed Pin From Net: NetName=G2_C Pin=P5-36
+Removed Pin From Net: NetName=R2_C Pin=P5-37
+Removed Pin From Net: NetName=B2_B Pin=P5-38
+Removed Pin From Net: NetName=GND Pin=P5-39
+Removed Pin From Net: NetName=B2_C Pin=P5-40
+Removed Pin From Net: NetName=R1_B_BUFF Pin=P6-1
+Removed Pin From Net: NetName=G1_B_BUFF Pin=P6-2
+Removed Pin From Net: NetName=B1_B_BUFF Pin=P6-3
+Removed Pin From Net: NetName=GND Pin=P6-4
+Removed Pin From Net: NetName=R2_B_BUFF Pin=P6-5
+Removed Pin From Net: NetName=G2_B_BUFF Pin=P6-6
+Removed Pin From Net: NetName=B2_B_BUFF Pin=P6-7
+Removed Pin From Net: NetName=GND Pin=P6-8
+Removed Pin From Net: NetName=A_BUFF Pin=P6-9
+Removed Pin From Net: NetName=B_BUFF Pin=P6-10
+Removed Pin From Net: NetName=C_BUFF Pin=P6-11
+Removed Pin From Net: NetName=D_BUFF Pin=P6-12
+Removed Pin From Net: NetName=CLK_B_BUFF Pin=P6-13
+Removed Pin From Net: NetName=LAT_B_BUFF Pin=P6-14
+Removed Pin From Net: NetName=OE_B_BUFF Pin=P6-15
+Removed Pin From Net: NetName=GND Pin=P6-16
+Removed Pin From Net: NetName=R1_O Pin=P7-1
+Removed Pin From Net: NetName=G1_O Pin=P7-2
+Removed Pin From Net: NetName=B1_O Pin=P7-3
+Removed Pin From Net: NetName=GND Pin=P7-4
+Removed Pin From Net: NetName=R2_O Pin=P7-5
+Removed Pin From Net: NetName=G2_O Pin=P7-6
+Removed Pin From Net: NetName=B2_O Pin=P7-7
+Removed Pin From Net: NetName=GND Pin=P7-8
+Removed Pin From Net: NetName=A_O Pin=P7-9
+Removed Pin From Net: NetName=B_O Pin=P7-10
+Removed Pin From Net: NetName=C_O Pin=P7-11
+Removed Pin From Net: NetName=D_O Pin=P7-12
+Removed Pin From Net: NetName=CLK_O Pin=P7-13
+Removed Pin From Net: NetName=LAT_O Pin=P7-14
+Removed Pin From Net: NetName=OE_O Pin=P7-15
+Removed Pin From Net: NetName=GND Pin=P7-16
+Removed Pin From Net: NetName=GND Pin=R4-1
+Removed Pin From Net: NetName=BAT_SENSE_A Pin=R4-2
+Removed Pin From Net: NetName=GND Pin=R7-1
+Removed Pin From Net: NetName=DISP_SENSE_B Pin=R7-2
+Removed Pin From Net: NetName=GND Pin=R8-1
+Removed Pin From Net: NetName=BAT_SENSE_B Pin=R8-2
+Removed Pin From Net: NetName=GND Pin=R11-1
+Removed Pin From Net: NetName=DISP_SENSE_C Pin=R11-2
+Removed Pin From Net: NetName=GND Pin=R12-1
+Removed Pin From Net: NetName=BAT_SENSE_C Pin=R12-2
+Removed Member From Class: ClassName=Display&Baterry detection Member=R4
+Removed Member From Class: ClassName=Display&Baterry detection Member=R7
+Removed Member From Class: ClassName=Display&Baterry detection Member=R8
+Removed Member From Class: ClassName=Display&Baterry detection Member=R11
+Removed Member From Class: ClassName=Display&Baterry detection Member=R12
+Added Component: Designator=P?(HDR2X8)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P?(HDR2X20)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P?(HDR2X8)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=P?-1
+Added Pin To Net: NetName=R1_B_BUFF Pin=P?-1
+Added Pin To Net: NetName=R1_O Pin=P?-1
+Added Pin To Net: NetName=5V Pin=P?-2
+Added Pin To Net: NetName=G1_B_BUFF Pin=P?-2
+Added Pin To Net: NetName=G1_O Pin=P?-2
+Added Pin To Net: NetName=B1_B_BUFF Pin=P?-3
+Added Pin To Net: NetName=B1_O Pin=P?-3
+Added Pin To Net: NetName=G1_C Pin=P?-3
+Added Pin To Net: NetName=5V Pin=P?-4
+Added Pin To Net: NetName=GND Pin=P?-4
+Added Pin To Net: NetName=GND Pin=P?-4
+Added Pin To Net: NetName=B1_C Pin=P?-5
+Added Pin To Net: NetName=R2_B_BUFF Pin=P?-5
+Added Pin To Net: NetName=R2_O Pin=P?-5
+Added Pin To Net: NetName=G2_B_BUFF Pin=P?-6
+Added Pin To Net: NetName=G2_O Pin=P?-6
+Added Pin To Net: NetName=GND Pin=P?-6
+Added Pin To Net: NetName=B2_B_BUFF Pin=P?-7
+Added Pin To Net: NetName=B2_O Pin=P?-7
+Added Pin To Net: NetName=LAT Pin=P?-7
+Added Pin To Net: NetName=GND Pin=P?-8
+Added Pin To Net: NetName=GND Pin=P?-8
+Added Pin To Net: NetName=R1_C Pin=P?-8
+Added Pin To Net: NetName=A_BUFF Pin=P?-9
+Added Pin To Net: NetName=A_O Pin=P?-9
+Added Pin To Net: NetName=GND Pin=P?-9
+Added Pin To Net: NetName=B_BUFF Pin=P?-10
+Added Pin To Net: NetName=B_O Pin=P?-10
+Added Pin To Net: NetName=E Pin=P?-10
+Added Pin To Net: NetName=C_BUFF Pin=P?-11
+Added Pin To Net: NetName=C_O Pin=P?-11
+Added Pin To Net: NetName=CLK Pin=P?-11
+Added Pin To Net: NetName=D_BUFF Pin=P?-12
+Added Pin To Net: NetName=D_O Pin=P?-12
+Added Pin To Net: NetName=OE Pin=P?-12
+Added Pin To Net: NetName=CLK_B_BUFF Pin=P?-13
+Added Pin To Net: NetName=CLK_O Pin=P?-13
+Added Pin To Net: NetName=G1_A Pin=P?-13
+Added Pin To Net: NetName=GND Pin=P?-14
+Added Pin To Net: NetName=LAT_B_BUFF Pin=P?-14
+Added Pin To Net: NetName=LAT_O Pin=P?-14
+Added Pin To Net: NetName=A Pin=P?-15
+Added Pin To Net: NetName=OE_B_BUFF Pin=P?-15
+Added Pin To Net: NetName=OE_O Pin=P?-15
+Added Pin To Net: NetName=B Pin=P?-16
+Added Pin To Net: NetName=GND Pin=P?-16
+Added Pin To Net: NetName=GND Pin=P?-16
+Added Pin To Net: NetName=3V3 Pin=P?-17
+Added Pin To Net: NetName=C Pin=P?-18
+Added Pin To Net: NetName=B2_A Pin=P?-19
+Added Pin To Net: NetName=GND Pin=P?-20
+Added Pin To Net: NetName=G2_A Pin=P?-21
+Added Pin To Net: NetName=D Pin=P?-22
+Added Pin To Net: NetName=R1_A Pin=P?-23
+Added Pin To Net: NetName=R2_A Pin=P?-24
+Added Pin To Net: NetName=GND Pin=P?-25
+Added Pin To Net: NetName=B1_A Pin=P?-26
+Added Pin To Net: NetName=SDA Pin=P?-27
+Added Pin To Net: NetName=SCL Pin=P?-28
+Added Pin To Net: NetName=G1_B Pin=P?-29
+Added Pin To Net: NetName=GND Pin=P?-30
+Added Pin To Net: NetName=B1_B Pin=P?-31
+Added Pin To Net: NetName=R1_B Pin=P?-32
+Added Pin To Net: NetName=G2_B Pin=P?-33
+Added Pin To Net: NetName=GND Pin=P?-34
+Added Pin To Net: NetName=R2_B Pin=P?-35
+Added Pin To Net: NetName=G2_C Pin=P?-36
+Added Pin To Net: NetName=R2_C Pin=P?-37
+Added Pin To Net: NetName=B2_B Pin=P?-38
+Added Pin To Net: NetName=GND Pin=P?-39
+Added Pin To Net: NetName=B2_C Pin=P?-40
+Change Class Name : Old Net Name=Board Edge Connectors New Net Name=Connectors
+Added Member To Class: ClassName=Connectors Member=Component P? INPUT_B
+Added Member To Class: ClassName=Connectors Member=Component P? RASPI
+Added Member To Class: ClassName=Connectors Member=Component P? OUTPUT_B
+Added Room: Name=3v3--5V Logic Level Conversion
+Added Room: Name=ADC
+Added Room: Name=Connectors
+Added Room: Name=Display&Baterry detection

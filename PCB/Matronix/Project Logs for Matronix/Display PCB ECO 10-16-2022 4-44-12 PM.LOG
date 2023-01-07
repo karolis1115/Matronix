@@ -1,0 +1,16 @@
+Removed Member From Class: ClassName=Display Member=P?
+Change Component Designator: OldDesignator=P3 NewDesignator=P2
+Change Component Designator: OldDesignator=P4 NewDesignator=P5
+Change Component Designator: OldDesignator=P5 NewDesignator=P7
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=P? NewDesignator=P3
+Change Component Designator: OldDesignator=P? NewDesignator=P4
+Change Component Designator: OldDesignator=U1 NewDesignator=U3
+Change Component Designator: OldDesignator=U3 NewDesignator=U1
+Change Component Designator: OldDesignator=U4 NewDesignator=U5
+Change Component Designator: OldDesignator=U5 NewDesignator=U4
+Change Net Name : Old Net Name=NetP4_20 New Net Name=NetP5_20
+Added Member To Class: ClassName=Display Member=Component P1 G630H9812248EU
+Added Member To Class: ClassName=Display Member=Component P3 G630H9812248EU
+Added Member To Class: ClassName=Display Member=Component P7 INPUT
+Added Room: Name=Display

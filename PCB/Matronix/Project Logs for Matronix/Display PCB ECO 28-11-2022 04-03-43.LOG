@@ -1,0 +1,157 @@
+Add Component: Footprint Not Found Model Name
+Added Component: Designator=P2(AMPHENOL_G630H9812248EU)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found Model Name
+Add Component: Footprint Not Found Model Name
+Add Pin To Net: Unknown Pin: Pin P1-A1
+Add Pin To Net: Unknown Pin: Pin P1-A2
+Add Pin To Net: Unknown Pin: Pin P1-A3
+Add Pin To Net: Unknown Pin: Pin P1-A4
+Add Pin To Net: Unknown Pin: Pin P1-A5
+Add Pin To Net: Unknown Pin: Pin P1-A6
+Add Pin To Net: Unknown Pin: Pin P1-A7
+Add Pin To Net: Unknown Pin: Pin P1-A8
+Add Pin To Net: Unknown Pin: Pin P1-A9
+Add Pin To Net: Unknown Pin: Pin P1-A10
+Add Pin To Net: Unknown Pin: Pin P1-A11
+Add Pin To Net: Unknown Pin: Pin P1-B1
+Add Pin To Net: Unknown Pin: Pin P1-B2
+Add Pin To Net: Unknown Pin: Pin P1-B3
+Add Pin To Net: Unknown Pin: Pin P1-B4
+Add Pin To Net: Unknown Pin: Pin P1-B5
+Add Pin To Net: Unknown Pin: Pin P1-B6
+Add Pin To Net: Unknown Pin: Pin P1-B7
+Add Pin To Net: Unknown Pin: Pin P1-B8
+Add Pin To Net: Unknown Pin: Pin P1-B9
+Add Pin To Net: Unknown Pin: Pin P1-B10
+Add Pin To Net: Unknown Pin: Pin P1-B11
+Added Pin To Net: NetName=5V Pin=P2-A1
+Added Pin To Net: NetName=5V Pin=P2-A2
+Added Pin To Net: NetName=5V Pin=P2-A3
+Added Pin To Net: NetName=5V Pin=P2-A4
+Added Pin To Net: NetName=5V Pin=P2-A5
+Added Pin To Net: NetName=5V Pin=P2-A6
+Added Pin To Net: NetName=5V Pin=P2-A7
+Added Pin To Net: NetName=5V Pin=P2-A8
+Added Pin To Net: NetName=5V Pin=P2-A9
+Added Pin To Net: NetName=5V Pin=P2-A10
+Added Pin To Net: NetName=5V Pin=P2-A11
+Added Pin To Net: NetName=R1_O Pin=P2-A20
+Added Pin To Net: NetName=B1_O Pin=P2-A21
+Added Pin To Net: NetName=R2_O Pin=P2-A22
+Added Pin To Net: NetName=B2_O Pin=P2-A23
+Added Pin To Net: NetName=A_O Pin=P2-A24
+Added Pin To Net: NetName=C_O Pin=P2-A25
+Added Pin To Net: NetName=CLK_O Pin=P2-A26
+Added Pin To Net: NetName=OE_O Pin=P2-A27
+Added Pin To Net: NetName=G1_O Pin=P2-A28
+Added Pin To Net: NetName=G2_O Pin=P2-A29
+Added Pin To Net: NetName=B_O Pin=P2-A30
+Added Pin To Net: NetName=D_O Pin=P2-A31
+Added Pin To Net: NetName=LAT_O Pin=P2-A32
+Added Pin To Net: NetName=E_BUFF Pin=P2-A40
+Added Pin To Net: NetName=AIN2 Pin=P2-A41
+Added Pin To Net: NetName=AIN3 Pin=P2-A42
+Added Pin To Net: NetName=DISP_SENSE_B Pin=P2-A48
+Added Pin To Net: NetName=BAT_SENSE_B Pin=P2-A49
+Added Pin To Net: NetName=GND Pin=P2-B1
+Added Pin To Net: NetName=GND Pin=P2-B2
+Added Pin To Net: NetName=GND Pin=P2-B3
+Added Pin To Net: NetName=GND Pin=P2-B4
+Added Pin To Net: NetName=GND Pin=P2-B5
+Added Pin To Net: NetName=GND Pin=P2-B6
+Added Pin To Net: NetName=GND Pin=P2-B7
+Added Pin To Net: NetName=GND Pin=P2-B8
+Added Pin To Net: NetName=GND Pin=P2-B9
+Added Pin To Net: NetName=GND Pin=P2-B10
+Added Pin To Net: NetName=GND Pin=P2-B11
+Add Pin To Net: Unknown Pin: Pin P3-A1
+Add Pin To Net: Unknown Pin: Pin P3-A2
+Add Pin To Net: Unknown Pin: Pin P3-A3
+Add Pin To Net: Unknown Pin: Pin P3-A4
+Add Pin To Net: Unknown Pin: Pin P3-A5
+Add Pin To Net: Unknown Pin: Pin P3-A6
+Add Pin To Net: Unknown Pin: Pin P3-A7
+Add Pin To Net: Unknown Pin: Pin P3-A8
+Add Pin To Net: Unknown Pin: Pin P3-A9
+Add Pin To Net: Unknown Pin: Pin P3-A10
+Add Pin To Net: Unknown Pin: Pin P3-A11
+Add Pin To Net: Unknown Pin: Pin P3-A20
+Add Pin To Net: Unknown Pin: Pin P3-A21
+Add Pin To Net: Unknown Pin: Pin P3-A22
+Add Pin To Net: Unknown Pin: Pin P3-A23
+Add Pin To Net: Unknown Pin: Pin P3-A24
+Add Pin To Net: Unknown Pin: Pin P3-A25
+Add Pin To Net: Unknown Pin: Pin P3-A26
+Add Pin To Net: Unknown Pin: Pin P3-A27
+Add Pin To Net: Unknown Pin: Pin P3-A28
+Add Pin To Net: Unknown Pin: Pin P3-A29
+Add Pin To Net: Unknown Pin: Pin P3-A30
+Add Pin To Net: Unknown Pin: Pin P3-A31
+Add Pin To Net: Unknown Pin: Pin P3-A32
+Add Pin To Net: Unknown Pin: Pin P3-A40
+Add Pin To Net: Unknown Pin: Pin P3-A41
+Add Pin To Net: Unknown Pin: Pin P3-A42
+Add Pin To Net: Unknown Pin: Pin P3-A48
+Add Pin To Net: Unknown Pin: Pin P3-A49
+Add Pin To Net: Unknown Pin: Pin P3-B1
+Add Pin To Net: Unknown Pin: Pin P3-B2
+Add Pin To Net: Unknown Pin: Pin P3-B3
+Add Pin To Net: Unknown Pin: Pin P3-B4
+Add Pin To Net: Unknown Pin: Pin P3-B5
+Add Pin To Net: Unknown Pin: Pin P3-B6
+Add Pin To Net: Unknown Pin: Pin P3-B7
+Add Pin To Net: Unknown Pin: Pin P3-B8
+Add Pin To Net: Unknown Pin: Pin P3-B9
+Add Pin To Net: Unknown Pin: Pin P3-B10
+Add Pin To Net: Unknown Pin: Pin P3-B11
+Add Pin To Net: Unknown Pin: Pin P4-A1
+Add Pin To Net: Unknown Pin: Pin P4-A2
+Add Pin To Net: Unknown Pin: Pin P4-A3
+Add Pin To Net: Unknown Pin: Pin P4-A4
+Add Pin To Net: Unknown Pin: Pin P4-A5
+Add Pin To Net: Unknown Pin: Pin P4-A6
+Add Pin To Net: Unknown Pin: Pin P4-A7
+Add Pin To Net: Unknown Pin: Pin P4-A8
+Add Pin To Net: Unknown Pin: Pin P4-A9
+Add Pin To Net: Unknown Pin: Pin P4-A10
+Add Pin To Net: Unknown Pin: Pin P4-A11
+Add Pin To Net: Unknown Pin: Pin P4-B1
+Add Pin To Net: Unknown Pin: Pin P4-B2
+Add Pin To Net: Unknown Pin: Pin P4-B3
+Add Pin To Net: Unknown Pin: Pin P4-B4
+Add Pin To Net: Unknown Pin: Pin P4-B5
+Add Pin To Net: Unknown Pin: Pin P4-B6
+Add Pin To Net: Unknown Pin: Pin P4-B7
+Add Pin To Net: Unknown Pin: Pin P4-B8
+Add Pin To Net: Unknown Pin: Pin P4-B9
+Add Pin To Net: Unknown Pin: Pin P4-B10
+Add Pin To Net: Unknown Pin: Pin P4-B11
+Add Pin To Net: Unknown Pin: Pin P4-B20
+Add Pin To Net: Unknown Pin: Pin P4-B21
+Add Pin To Net: Unknown Pin: Pin P4-B22
+Add Pin To Net: Unknown Pin: Pin P4-B23
+Add Pin To Net: Unknown Pin: Pin P4-B24
+Add Pin To Net: Unknown Pin: Pin P4-B25
+Add Pin To Net: Unknown Pin: Pin P4-B26
+Add Pin To Net: Unknown Pin: Pin P4-B27
+Add Pin To Net: Unknown Pin: Pin P4-B28
+Add Pin To Net: Unknown Pin: Pin P4-B29
+Add Pin To Net: Unknown Pin: Pin P4-B30
+Add Pin To Net: Unknown Pin: Pin P4-B31
+Add Pin To Net: Unknown Pin: Pin P4-B32
+Add Pin To Net: Unknown Pin: Pin P4-B40
+Add Pin To Net: Unknown Pin: Pin P4-B41
+Add Pin To Net: Unknown Pin: Pin P4-B42
+Add Pin To Net: Unknown Pin: Pin P4-B48
+Add Pin To Net: Unknown Pin: Pin P4-B49
+Add Class Member: Failed to add class member : Component P1 G630H9812248EU
+Added Member To Class: ClassName=Board Edge Connectors Member=Component P2 G630H9812248EU
+Add Class Member: Failed to add class member : Component P3 G630H9812248EU
+Add Class Member: Failed to add class member : Component P4 G630H9812248EU

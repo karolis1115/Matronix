@@ -1,0 +1,217 @@
+Added Component: Designator=P1(AMPHENOL_G630H9812248EU)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P2(AMPHENOL_G630H9812248EU)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=P1-A1
+Added Pin To Net: NetName=GND Pin=P1-A2
+Added Pin To Net: NetName=GND Pin=P1-A3
+Added Pin To Net: NetName=GND Pin=P1-A4
+Added Pin To Net: NetName=GND Pin=P1-A5
+Added Pin To Net: NetName=GND Pin=P1-A6
+Added Pin To Net: NetName=GND Pin=P1-A7
+Added Pin To Net: NetName=GND Pin=P1-A8
+Added Pin To Net: NetName=GND Pin=P1-A9
+Added Pin To Net: NetName=GND Pin=P1-A10
+Added Pin To Net: NetName=GND Pin=P1-A11
+Added Pin To Net: NetName=NetLabel1 Pin=P1-A12
+Added Pin To Net: NetName=NetLabel2 Pin=P1-A13
+Added Pin To Net: NetName=NetLabel3 Pin=P1-A14
+Added Pin To Net: NetName=NetLabel4 Pin=P1-A15
+Added Pin To Net: NetName=NetLabel5 Pin=P1-A16
+Added Pin To Net: NetName=NetLabel6 Pin=P1-A17
+Added Pin To Net: NetName=NetLabel7 Pin=P1-A18
+Added Pin To Net: NetName=NetLabel8 Pin=P1-A19
+Added Pin To Net: NetName=NetLabel9 Pin=P1-A20
+Added Pin To Net: NetName=NetLabel10 Pin=P1-A21
+Added Pin To Net: NetName=NetLabel11 Pin=P1-A22
+Added Pin To Net: NetName=NetLabel12 Pin=P1-A23
+Added Pin To Net: NetName=NetLabel13 Pin=P1-A24
+Added Pin To Net: NetName=NetLabel14 Pin=P1-A25
+Added Pin To Net: NetName=NetLabel15 Pin=P1-A26
+Added Pin To Net: NetName=NetLabel16 Pin=P1-A27
+Added Pin To Net: NetName=NetLabel17 Pin=P1-A28
+Added Pin To Net: NetName=NetLabel18 Pin=P1-A29
+Added Pin To Net: NetName=NetLabel19 Pin=P1-A30
+Added Pin To Net: NetName=NetLabel20 Pin=P1-A31
+Added Pin To Net: NetName=NetLabel21 Pin=P1-A32
+Added Pin To Net: NetName=NetLabel22 Pin=P1-A33
+Added Pin To Net: NetName=NetLabel23 Pin=P1-A34
+Added Pin To Net: NetName=NetLabel24 Pin=P1-A35
+Added Pin To Net: NetName=NetLabel25 Pin=P1-A36
+Added Pin To Net: NetName=NetLabel26 Pin=P1-A37
+Added Pin To Net: NetName=NetLabel27 Pin=P1-A38
+Added Pin To Net: NetName=NetLabel28 Pin=P1-A39
+Added Pin To Net: NetName=NetLabel29 Pin=P1-A40
+Added Pin To Net: NetName=NetLabel30 Pin=P1-A41
+Added Pin To Net: NetName=NetLabel31 Pin=P1-A42
+Added Pin To Net: NetName=NetLabel32 Pin=P1-A43
+Added Pin To Net: NetName=NetLabel34 Pin=P1-A44
+Added Pin To Net: NetName=NetLabel35 Pin=P1-A45
+Added Pin To Net: NetName=NetLabel36 Pin=P1-A46
+Added Pin To Net: NetName=NetLabel37 Pin=P1-A47
+Added Pin To Net: NetName=NetLabel38 Pin=P1-A48
+Added Pin To Net: NetName=NetLabel39 Pin=P1-A49
+Added Pin To Net: NetName=+5V Pin=P1-B1
+Added Pin To Net: NetName=+5V Pin=P1-B2
+Added Pin To Net: NetName=+5V Pin=P1-B3
+Added Pin To Net: NetName=+5V Pin=P1-B4
+Added Pin To Net: NetName=+5V Pin=P1-B5
+Added Pin To Net: NetName=+5V Pin=P1-B6
+Added Pin To Net: NetName=+5V Pin=P1-B7
+Added Pin To Net: NetName=+5V Pin=P1-B8
+Added Pin To Net: NetName=+5V Pin=P1-B9
+Added Pin To Net: NetName=+5V Pin=P1-B10
+Added Pin To Net: NetName=+5V Pin=P1-B11
+Added Pin To Net: NetName=NetP1_B12 Pin=P1-B12
+Added Pin To Net: NetName=NetP1_B13 Pin=P1-B13
+Added Pin To Net: NetName=NetP1_B14 Pin=P1-B14
+Added Pin To Net: NetName=NetP1_B15 Pin=P1-B15
+Added Pin To Net: NetName=NetP1_B16 Pin=P1-B16
+Added Pin To Net: NetName=NetP1_B17 Pin=P1-B17
+Added Pin To Net: NetName=NetP1_B18 Pin=P1-B18
+Added Pin To Net: NetName=NetP1_B19 Pin=P1-B19
+Added Pin To Net: NetName=NetP1_B20 Pin=P1-B20
+Added Pin To Net: NetName=NetP1_B21 Pin=P1-B21
+Added Pin To Net: NetName=NetP1_B22 Pin=P1-B22
+Added Pin To Net: NetName=NetP1_B23 Pin=P1-B23
+Added Pin To Net: NetName=NetP1_B24 Pin=P1-B24
+Added Pin To Net: NetName=NetP1_B25 Pin=P1-B25
+Added Pin To Net: NetName=NetP1_B26 Pin=P1-B26
+Added Pin To Net: NetName=NetP1_B27 Pin=P1-B27
+Added Pin To Net: NetName=NetP1_B28 Pin=P1-B28
+Added Pin To Net: NetName=NetP1_B29 Pin=P1-B29
+Added Pin To Net: NetName=NetP1_B30 Pin=P1-B30
+Added Pin To Net: NetName=NetP1_B31 Pin=P1-B31
+Added Pin To Net: NetName=NetP1_B32 Pin=P1-B32
+Added Pin To Net: NetName=NetP1_B33 Pin=P1-B33
+Added Pin To Net: NetName=NetP1_B34 Pin=P1-B34
+Added Pin To Net: NetName=NetP1_B35 Pin=P1-B35
+Added Pin To Net: NetName=NetP1_B36 Pin=P1-B36
+Added Pin To Net: NetName=NetP1_B37 Pin=P1-B37
+Added Pin To Net: NetName=NetP1_B38 Pin=P1-B38
+Added Pin To Net: NetName=NetP1_B39 Pin=P1-B39
+Added Pin To Net: NetName=NetP1_B40 Pin=P1-B40
+Added Pin To Net: NetName=NetP1_B41 Pin=P1-B41
+Added Pin To Net: NetName=NetP1_B42 Pin=P1-B42
+Added Pin To Net: NetName=NetP1_B43 Pin=P1-B43
+Added Pin To Net: NetName=NetP1_B44 Pin=P1-B44
+Added Pin To Net: NetName=NetP1_B45 Pin=P1-B45
+Added Pin To Net: NetName=NetP1_B46 Pin=P1-B46
+Added Pin To Net: NetName=NetP1_B47 Pin=P1-B47
+Added Pin To Net: NetName=NetP1_B48 Pin=P1-B48
+Added Pin To Net: NetName=NetP1_B49 Pin=P1-B49
+Added Pin To Net: NetName=+5V Pin=P2-A1
+Added Pin To Net: NetName=+5V Pin=P2-A2
+Added Pin To Net: NetName=+5V Pin=P2-A3
+Added Pin To Net: NetName=+5V Pin=P2-A4
+Added Pin To Net: NetName=+5V Pin=P2-A5
+Added Pin To Net: NetName=+5V Pin=P2-A6
+Added Pin To Net: NetName=+5V Pin=P2-A7
+Added Pin To Net: NetName=+5V Pin=P2-A8
+Added Pin To Net: NetName=+5V Pin=P2-A9
+Added Pin To Net: NetName=+5V Pin=P2-A10
+Added Pin To Net: NetName=+5V Pin=P2-A11
+Added Pin To Net: NetName=NetP1_B12 Pin=P2-A12
+Added Pin To Net: NetName=NetP1_B13 Pin=P2-A13
+Added Pin To Net: NetName=NetP1_B14 Pin=P2-A14
+Added Pin To Net: NetName=NetP1_B15 Pin=P2-A15
+Added Pin To Net: NetName=NetP1_B16 Pin=P2-A16
+Added Pin To Net: NetName=NetP1_B17 Pin=P2-A17
+Added Pin To Net: NetName=NetP1_B18 Pin=P2-A18
+Added Pin To Net: NetName=NetP1_B19 Pin=P2-A19
+Added Pin To Net: NetName=NetP1_B20 Pin=P2-A20
+Added Pin To Net: NetName=NetP1_B21 Pin=P2-A21
+Added Pin To Net: NetName=NetP1_B22 Pin=P2-A22
+Added Pin To Net: NetName=NetP1_B23 Pin=P2-A23
+Added Pin To Net: NetName=NetP1_B24 Pin=P2-A24
+Added Pin To Net: NetName=NetP1_B25 Pin=P2-A25
+Added Pin To Net: NetName=NetP1_B26 Pin=P2-A26
+Added Pin To Net: NetName=NetP1_B27 Pin=P2-A27
+Added Pin To Net: NetName=NetP1_B28 Pin=P2-A28
+Added Pin To Net: NetName=NetP1_B29 Pin=P2-A29
+Added Pin To Net: NetName=NetP1_B30 Pin=P2-A30
+Added Pin To Net: NetName=NetP1_B31 Pin=P2-A31
+Added Pin To Net: NetName=NetP1_B32 Pin=P2-A32
+Added Pin To Net: NetName=NetP1_B33 Pin=P2-A33
+Added Pin To Net: NetName=NetP1_B34 Pin=P2-A34
+Added Pin To Net: NetName=NetP1_B35 Pin=P2-A35
+Added Pin To Net: NetName=NetP1_B36 Pin=P2-A36
+Added Pin To Net: NetName=NetP1_B37 Pin=P2-A37
+Added Pin To Net: NetName=NetP1_B38 Pin=P2-A38
+Added Pin To Net: NetName=NetP1_B39 Pin=P2-A39
+Added Pin To Net: NetName=NetP1_B40 Pin=P2-A40
+Added Pin To Net: NetName=NetP1_B41 Pin=P2-A41
+Added Pin To Net: NetName=NetP1_B42 Pin=P2-A42
+Added Pin To Net: NetName=NetP1_B43 Pin=P2-A43
+Added Pin To Net: NetName=NetP1_B44 Pin=P2-A44
+Added Pin To Net: NetName=NetP1_B45 Pin=P2-A45
+Added Pin To Net: NetName=NetP1_B46 Pin=P2-A46
+Added Pin To Net: NetName=NetP1_B47 Pin=P2-A47
+Added Pin To Net: NetName=NetP1_B48 Pin=P2-A48
+Added Pin To Net: NetName=NetP1_B49 Pin=P2-A49
+Added Pin To Net: NetName=GND Pin=P2-B1
+Added Pin To Net: NetName=GND Pin=P2-B2
+Added Pin To Net: NetName=GND Pin=P2-B3
+Added Pin To Net: NetName=GND Pin=P2-B4
+Added Pin To Net: NetName=GND Pin=P2-B5
+Added Pin To Net: NetName=GND Pin=P2-B6
+Added Pin To Net: NetName=GND Pin=P2-B7
+Added Pin To Net: NetName=GND Pin=P2-B8
+Added Pin To Net: NetName=GND Pin=P2-B9
+Added Pin To Net: NetName=GND Pin=P2-B10
+Added Pin To Net: NetName=GND Pin=P2-B11
+Added Pin To Net: NetName=NetLabel1 Pin=P2-B12
+Added Pin To Net: NetName=NetLabel2 Pin=P2-B13
+Added Pin To Net: NetName=NetLabel3 Pin=P2-B14
+Added Pin To Net: NetName=NetLabel4 Pin=P2-B15
+Added Pin To Net: NetName=NetLabel5 Pin=P2-B16
+Added Pin To Net: NetName=NetLabel6 Pin=P2-B17
+Added Pin To Net: NetName=NetLabel7 Pin=P2-B18
+Added Pin To Net: NetName=NetLabel8 Pin=P2-B19
+Added Pin To Net: NetName=NetLabel9 Pin=P2-B20
+Added Pin To Net: NetName=NetLabel10 Pin=P2-B21
+Added Pin To Net: NetName=NetLabel11 Pin=P2-B22
+Added Pin To Net: NetName=NetLabel12 Pin=P2-B23
+Added Pin To Net: NetName=NetLabel13 Pin=P2-B24
+Added Pin To Net: NetName=NetLabel14 Pin=P2-B25
+Added Pin To Net: NetName=NetLabel15 Pin=P2-B26
+Added Pin To Net: NetName=NetLabel16 Pin=P2-B27
+Added Pin To Net: NetName=NetLabel17 Pin=P2-B28
+Added Pin To Net: NetName=NetLabel18 Pin=P2-B29
+Added Pin To Net: NetName=NetLabel19 Pin=P2-B30
+Added Pin To Net: NetName=NetLabel20 Pin=P2-B31
+Added Pin To Net: NetName=NetLabel21 Pin=P2-B32
+Added Pin To Net: NetName=NetLabel22 Pin=P2-B33
+Added Pin To Net: NetName=NetLabel23 Pin=P2-B34
+Added Pin To Net: NetName=NetLabel24 Pin=P2-B35
+Added Pin To Net: NetName=NetLabel25 Pin=P2-B36
+Added Pin To Net: NetName=NetLabel26 Pin=P2-B37
+Added Pin To Net: NetName=NetLabel27 Pin=P2-B38
+Added Pin To Net: NetName=NetLabel28 Pin=P2-B39
+Added Pin To Net: NetName=NetLabel29 Pin=P2-B40
+Added Pin To Net: NetName=NetLabel30 Pin=P2-B41
+Added Pin To Net: NetName=NetLabel31 Pin=P2-B42
+Added Pin To Net: NetName=NetLabel32 Pin=P2-B43
+Added Pin To Net: NetName=NetLabel34 Pin=P2-B44
+Added Pin To Net: NetName=NetLabel35 Pin=P2-B45
+Added Pin To Net: NetName=NetLabel36 Pin=P2-B46
+Added Pin To Net: NetName=NetLabel37 Pin=P2-B47
+Added Pin To Net: NetName=NetLabel38 Pin=P2-B48
+Added Pin To Net: NetName=NetLabel39 Pin=P2-B49
+Added Member To Class: ClassName=PCIe_connection_board Member=Component P1 G630H9812248EU
+Added Member To Class: ClassName=PCIe_connection_board Member=Component P2 G630H9812248EU
+Added Room: Name=PCIe_connection_board

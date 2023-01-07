@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=GND Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=BAT_SENSE_A Pin=J1-3
+Removed Pin From Net: NetName=SDA Pin=J1-4
+Removed Pin From Net: NetName=SCL Pin=J1-5
+Removed Pin From Net: NetName=5V Pin=J1-6
+Removed Pin From Net: NetName=5V Pin=J1-7
+Removed Pin From Net: NetName=5V Pin=J1-8
+Added Pin To Net: NetName=5V Pin=J1-1
+Added Pin To Net: NetName=5V Pin=J1-2
+Added Pin To Net: NetName=5V Pin=J1-3
+Added Pin To Net: NetName=SCL Pin=J1-4
+Added Pin To Net: NetName=SDA Pin=J1-5
+Added Pin To Net: NetName=BAT_SENSE_A Pin=J1-6
+Added Pin To Net: NetName=GND Pin=J1-7
+Added Pin To Net: NetName=GND Pin=J1-8
+Added Room: Name=3v3--5V Logic Level Conversion
+Added Room: Name=ADC
+Added Room: Name=Connectors
+Added Room: Name=Display&Baterry detection

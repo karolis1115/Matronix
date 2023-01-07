@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=BAT_SENSE_A Pin=J1-6
+Added Pin To Net: NetName=BAT_SENSE_B Pin=J1-6
+Added Member To Class: ClassName=ADC Member=Component C1 1206GC102KAT1A
+Added Member To Class: ClassName=ADC Member=Component C2 1206GC102KAT1A
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R1 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R2 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R3 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R4 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R5 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R6 RC1206JR-070RL
+Added Member To Class: ClassName=Display&Baterry detection Member=Component R7 RC1206JR-070RL
+Added Member To Class: ClassName=ADC Member=Component R8 RC1206JR-070RL
+Added Member To Class: ClassName=ADC Member=Component R9 RC1206JR-070RL
+Added Member To Class: ClassName=ADC Member=Component U5 ADS1115IDGSR
+Added Member To Class: ClassName=ADC Member=Component U6 ADS1115IDGSR

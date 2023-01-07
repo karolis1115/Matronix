@@ -1,0 +1,145 @@
+Removed Pin From Net: NetName=GND Pin=P?-B1
+Removed Pin From Net: NetName=GND Pin=P?-B2
+Removed Pin From Net: NetName=GND Pin=P?-B3
+Removed Pin From Net: NetName=GND Pin=P?-B4
+Removed Pin From Net: NetName=GND Pin=P?-B5
+Removed Pin From Net: NetName=GND Pin=P?-B6
+Removed Pin From Net: NetName=GND Pin=P?-B7
+Removed Pin From Net: NetName=GND Pin=P?-B8
+Removed Pin From Net: NetName=GND Pin=P?-B9
+Removed Pin From Net: NetName=GND Pin=P?-B10
+Removed Pin From Net: NetName=GND Pin=P?-B11
+Change component parameters: Designator = "P?" ("P?"); Footprint = "AMPHENOL_G630H9812248EU"; UniqueID = "\HXMLCSTP" ("\HXMLCSTP")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "G630H9812248EU-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "G630H9812248EU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/G630H9812248EU/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/G630H9812248EU/Amphenol%20FCI/view-part/704000/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=P?-A1
+Added Pin To Net: NetName=GND Pin=P?-A2
+Added Pin To Net: NetName=GND Pin=P?-A3
+Added Pin To Net: NetName=GND Pin=P?-A4
+Added Pin To Net: NetName=GND Pin=P?-A5
+Added Pin To Net: NetName=GND Pin=P?-A6
+Added Pin To Net: NetName=GND Pin=P?-A7
+Added Pin To Net: NetName=GND Pin=P?-A8
+Added Pin To Net: NetName=GND Pin=P?-A9
+Added Pin To Net: NetName=GND Pin=P?-A10
+Added Pin To Net: NetName=GND Pin=P?-A11
+Added Pin To Net: NetName=NetP?_A12 Pin=P?-A12
+Added Pin To Net: NetName=NetP?_A12 Pin=P?-B12
+Added Net: Name=NetP?_A12
+Added Pin To Net: NetName=NetP?_A13 Pin=P?-A13
+Added Pin To Net: NetName=NetP?_A13 Pin=P?-B13
+Added Net: Name=NetP?_A13
+Added Pin To Net: NetName=NetP?_A14 Pin=P?-A14
+Added Pin To Net: NetName=NetP?_A14 Pin=P?-B14
+Added Net: Name=NetP?_A14
+Added Pin To Net: NetName=NetP?_A15 Pin=P?-A15
+Added Pin To Net: NetName=NetP?_A15 Pin=P?-B15
+Added Net: Name=NetP?_A15
+Added Pin To Net: NetName=NetP?_A16 Pin=P?-A16
+Added Pin To Net: NetName=NetP?_A16 Pin=P?-B16
+Added Net: Name=NetP?_A16
+Added Pin To Net: NetName=NetP?_A17 Pin=P?-A17
+Added Pin To Net: NetName=NetP?_A17 Pin=P?-B17
+Added Net: Name=NetP?_A17
+Added Pin To Net: NetName=NetP?_A18 Pin=P?-A18
+Added Pin To Net: NetName=NetP?_A18 Pin=P?-B18
+Added Net: Name=NetP?_A18
+Added Pin To Net: NetName=NetP?_A19 Pin=P?-A19
+Added Pin To Net: NetName=NetP?_A19 Pin=P?-B19
+Added Net: Name=NetP?_A19
+Added Pin To Net: NetName=NetP?_A20 Pin=P?-A20
+Added Pin To Net: NetName=NetP?_A20 Pin=P?-B20
+Added Net: Name=NetP?_A20
+Added Pin To Net: NetName=NetP?_A21 Pin=P?-A21
+Added Pin To Net: NetName=NetP?_A21 Pin=P?-B21
+Added Net: Name=NetP?_A21
+Added Pin To Net: NetName=NetP?_A22 Pin=P?-A22
+Added Pin To Net: NetName=NetP?_A22 Pin=P?-B22
+Added Net: Name=NetP?_A22
+Added Pin To Net: NetName=NetP?_A23 Pin=P?-A23
+Added Pin To Net: NetName=NetP?_A23 Pin=P?-B23
+Added Net: Name=NetP?_A23
+Added Pin To Net: NetName=NetP?_A24 Pin=P?-A24
+Added Pin To Net: NetName=NetP?_A24 Pin=P?-B24
+Added Net: Name=NetP?_A24
+Added Pin To Net: NetName=NetP?_A25 Pin=P?-A25
+Added Pin To Net: NetName=NetP?_A25 Pin=P?-B25
+Added Net: Name=NetP?_A25
+Added Pin To Net: NetName=NetP?_A26 Pin=P?-A26
+Added Pin To Net: NetName=NetP?_A26 Pin=P?-B26
+Added Net: Name=NetP?_A26
+Added Pin To Net: NetName=NetP?_A27 Pin=P?-A27
+Added Pin To Net: NetName=NetP?_A27 Pin=P?-B27
+Added Net: Name=NetP?_A27
+Added Pin To Net: NetName=NetP?_A28 Pin=P?-A28
+Added Pin To Net: NetName=NetP?_A28 Pin=P?-B28
+Added Net: Name=NetP?_A28
+Added Pin To Net: NetName=NetP?_A29 Pin=P?-A29
+Added Pin To Net: NetName=NetP?_A29 Pin=P?-B29
+Added Net: Name=NetP?_A29
+Added Pin To Net: NetName=NetP?_A30 Pin=P?-A30
+Added Pin To Net: NetName=NetP?_A30 Pin=P?-B30
+Added Net: Name=NetP?_A30
+Added Pin To Net: NetName=NetP?_A31 Pin=P?-A31
+Added Pin To Net: NetName=NetP?_A31 Pin=P?-B31
+Added Net: Name=NetP?_A31
+Added Pin To Net: NetName=NetP?_A32 Pin=P?-A32
+Added Pin To Net: NetName=NetP?_A32 Pin=P?-B32
+Added Net: Name=NetP?_A32
+Added Pin To Net: NetName=NetP?_A33 Pin=P?-A33
+Added Pin To Net: NetName=NetP?_A33 Pin=P?-B33
+Added Net: Name=NetP?_A33
+Added Pin To Net: NetName=NetP?_A34 Pin=P?-A34
+Added Pin To Net: NetName=NetP?_A34 Pin=P?-B34
+Added Net: Name=NetP?_A34
+Added Pin To Net: NetName=NetP?_A35 Pin=P?-A35
+Added Pin To Net: NetName=NetP?_A35 Pin=P?-B35
+Added Net: Name=NetP?_A35
+Added Pin To Net: NetName=NetP?_A36 Pin=P?-A36
+Added Pin To Net: NetName=NetP?_A36 Pin=P?-B36
+Added Net: Name=NetP?_A36
+Added Pin To Net: NetName=NetP?_A37 Pin=P?-A37
+Added Pin To Net: NetName=NetP?_A37 Pin=P?-B37
+Added Net: Name=NetP?_A37
+Added Pin To Net: NetName=NetP?_A38 Pin=P?-A38
+Added Pin To Net: NetName=NetP?_A38 Pin=P?-B38
+Added Net: Name=NetP?_A38
+Added Pin To Net: NetName=NetP?_A39 Pin=P?-A39
+Added Pin To Net: NetName=NetP?_A39 Pin=P?-B39
+Added Net: Name=NetP?_A39
+Added Pin To Net: NetName=NetP?_A40 Pin=P?-A40
+Added Pin To Net: NetName=NetP?_A40 Pin=P?-B40
+Added Net: Name=NetP?_A40
+Added Pin To Net: NetName=NetP?_A41 Pin=P?-A41
+Added Pin To Net: NetName=NetP?_A41 Pin=P?-B41
+Added Net: Name=NetP?_A41
+Added Pin To Net: NetName=NetP?_A42 Pin=P?-A42
+Added Pin To Net: NetName=NetP?_A42 Pin=P?-B42
+Added Net: Name=NetP?_A42
+Added Pin To Net: NetName=NetP?_A43 Pin=P?-A43
+Added Pin To Net: NetName=NetP?_A43 Pin=P?-B43
+Added Net: Name=NetP?_A43
+Added Pin To Net: NetName=NetP?_A44 Pin=P?-A44
+Added Pin To Net: NetName=NetP?_A44 Pin=P?-B44
+Added Net: Name=NetP?_A44
+Added Pin To Net: NetName=NetP?_A45 Pin=P?-A45
+Added Pin To Net: NetName=NetP?_A45 Pin=P?-B45
+Added Net: Name=NetP?_A45
+Added Pin To Net: NetName=NetP?_A46 Pin=P?-A46
+Added Pin To Net: NetName=NetP?_A46 Pin=P?-B46
+Added Net: Name=NetP?_A46
+Added Pin To Net: NetName=NetP?_A47 Pin=P?-A47
+Added Pin To Net: NetName=NetP?_A47 Pin=P?-B47
+Added Net: Name=NetP?_A47
+Added Pin To Net: NetName=NetP?_A48 Pin=P?-A48
+Added Pin To Net: NetName=NetP?_A48 Pin=P?-B48
+Added Net: Name=NetP?_A48
+Added Pin To Net: NetName=NetP?_A49 Pin=P?-A49
+Added Pin To Net: NetName=NetP?_A49 Pin=P?-B49
+Added Net: Name=NetP?_A49
+Added Member To Class: ClassName=PCIe_connection_board Member=Component P? G630H9812248EU
