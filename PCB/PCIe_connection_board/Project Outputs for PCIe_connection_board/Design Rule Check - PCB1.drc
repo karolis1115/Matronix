@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\karol\Desktop\PCIe_connection_board\PCB1.PcbDoc
-Date     : 07/12/2022
-Time     : 20:35:27
+PCB File : C:\Users\karol\Desktop\Class work\Year 2\Q2\Matronix\PCB\PCIe_connection_board\PCB1.PcbDoc
+Date     : 10/01/2023
+Time     : 10:17:50
 
 Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
 Rule Violations :0
@@ -265,4 +265,4 @@ Waived Violations :16
 
 Violations Detected : 0
 Waived Violations : 205
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01

@@ -1,9 +1,0 @@
-G04:AMPARAMS|DCode=58|XSize=94.49mil|YSize=196.85mil|CornerRadius=47.24mil|HoleSize=0mil|Usage=FLASHONLY|Rotation=0.000|XOffset=0mil|YOffset=0mil|HoleType=Round|Shape=RoundedRectangle|*
-%AMROUNDEDRECTD58*
-21,1,0.09449,0.10236,0,0,0.0*
-21,1,0.00000,0.19685,0,0,0.0*
-1,1,0.09449,0.00000,-0.05118*
-1,1,0.09449,0.00000,-0.05118*
-1,1,0.09449,0.00000,0.05118*
-1,1,0.09449,0.00000,0.05118*
-%
